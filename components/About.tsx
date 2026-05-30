@@ -20,7 +20,7 @@ const experience = [
 ];
 
 const extras = [
-  "🎵 Convinced Fred Again to come on my rooftop in Naples — outcome was a private dj set, a YouTube video and 2M+ views :)",
+  "🎵 Organised Fred Again on my rooftop in Naples — YouTube video, 2M+ views",
   "🤿 Competitive water polo athlete at national level (2008–2018)",
   "🌏 6 months solo backpacking across Southeast Asia",
 ];
@@ -35,24 +35,48 @@ export default function About() {
       </div>
 
       <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
-        <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: "21px", fontWeight: 600, color: "#111827", marginBottom: "10px", letterSpacing: "-0.01em" }}>
-          Why I&apos;m different from most freelancers
-        </h2>
+
+        {/* Foto + Nome + Tagline */}
+        <div style={{ display: "flex", gap: "20px", alignItems: "center", marginBottom: "20px" }}>
+          <div style={{
+            width: "72px", height: "72px", borderRadius: "50%",
+            background: "#e4eaf2", flexShrink: 0,
+            display: "flex", alignItems: "center", justifyContent: "center",
+            border: "1px solid #c8d3e0", overflow: "hidden"
+          }}>
+            {/* Sostituisci src con la tua foto in /public/federico.jpg */}
+            <img
+              src="/federico.jpg"
+              alt="Federico De Micco"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              
+            />
+          </div>
+          <div>
+            <h2 style={{
+              fontFamily: "'Fraunces', serif", fontSize: "22px",
+              fontWeight: 600, color: "#111827", letterSpacing: "-0.01em",
+              marginBottom: "3px"
+            }}>Federico De Micco</h2>
+            <p style={{ fontSize: "13px", color: "#6b7280" }}>
+              Web developer & marketing strategist · Sydney
+            </p>
+          </div>
+        </div>
+
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "24px", maxWidth: "560px" }}>
           I started as a marketer, not a developer. Every site I build is designed around one question:{" "}
           <strong style={{ color: "#111827" }}>does this actually convert?</strong>{" "}
           I bring the same analytical rigour I used at Lindt, Amazon and L&apos;Oréal to every project.
         </p>
 
-        {/* Experience */}
         <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "28px" }}>
           {experience.map(e => (
             <div key={e.company} style={{ display: "flex", gap: "14px", alignItems: "center" }}>
               <div style={{
                 width: "36px", height: "36px", borderRadius: "10px", flexShrink: 0,
                 background: "#f8f8f8", border: "1px solid #e5e7eb",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                overflow: "hidden"
+                display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden"
               }}>
                 <img src={e.logo} alt={e.company} style={{ width: "22px", height: "22px", objectFit: "contain" }} />
               </div>
@@ -67,7 +91,6 @@ export default function About() {
           ))}
         </div>
 
-        {/* Education */}
         <div style={{ background: "#eef1f5", borderRadius: "14px", padding: "16px 20px", marginBottom: "24px" }}>
           <p style={{ fontSize: "12px", fontWeight: 700, color: "#2563ab", marginBottom: "8px", textTransform: "uppercase" as const, letterSpacing: "0.06em" }}>Education</p>
           <p style={{ fontSize: "13px", color: "#111827", fontWeight: 600, marginBottom: "2px" }}>Double MSc — Bocconi University + HEC Montréal</p>
@@ -76,7 +99,6 @@ export default function About() {
           <p style={{ fontSize: "12px", color: "#6b7280" }}>110/110 cum laude · Erasmus 6 months in Barcelona</p>
         </div>
 
-        {/* Extras */}
         <div>
           <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.08em", color: "#9ca3af", marginBottom: "12px" }}>The stuff I actually talk about at dinner</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
