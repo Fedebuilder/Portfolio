@@ -20,7 +20,7 @@ const experience = [
 ];
 
 const extras = [
-  "🎵 Organised Fred Again on my rooftop in Naples — YouTube video, 2M+ views",
+  "🎵 Hosted Fred Again on my rooftop in Naples — if you don't believe me there's a YouTube video with 2M+ views :')",
   "🤿 Competitive water polo athlete at national level (2008–2018)",
   "🌏 6 months solo backpacking across Southeast Asia",
 ];
