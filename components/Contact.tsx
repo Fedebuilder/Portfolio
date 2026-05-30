@@ -17,13 +17,23 @@ export default function Contact() {
         display: "flex", alignItems: "center", justifyContent: "center",
         gap: "10px", marginTop: "24px"
       }}>
-        <img
-          src="/bubu.jpg"
-          alt="Bubu the avocado"
-          style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover" }}
-        />
+        <div style={{
+          width: "30px", height: "30px", borderRadius: "50%",
+          overflow: "hidden", background: "#f0f9ee", flexShrink: 0,
+        }}>
+          <img
+            src="/bubu.jpg"
+            alt="Bubu the avocado"
+            style={{
+              width: "100%", height: "100%",
+              objectFit: "cover",
+              objectPosition: "center 32%",
+              transform: "scale(1.6)"
+            }}
+          />
+        </div>
         <p style={{ fontSize: "11px", color: "#9ca3af" }}>
-          Built by Federico, with moral support from Bubu, the cute Avocado right here :)
+          Built by Federico, with moral support from Bubu the avocado.
         </p>
       </div>
 

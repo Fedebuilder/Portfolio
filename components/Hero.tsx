@@ -28,10 +28,16 @@ export default function Hero() {
           </h1>
           <p style={{
             fontSize: "16px", color: "#4b5563", lineHeight: 1.65,
-            marginBottom: "24px", maxWidth: "480px"
+            marginBottom: "16px", maxWidth: "480px"
           }}>
             I build websites and web apps that look great and actually convert.
             Background at Lindt, Amazon and L&apos;Oréal means I think about growth, not just code.
+          </p>
+          <p style={{
+            fontSize: "14px", color: "#6b7280", lineHeight: 1.6,
+            fontStyle: "italic" as const, marginBottom: "24px", maxWidth: "480px"
+          }}>
+            I know developers can feel intimidating to talk to — promise I&apos;m not :)
           </p>
           <div style={{ display: "flex", flexWrap: "wrap" as const, gap: "8px" }}>
             {["Next.js", "React", "TypeScript", "Supabase", "Stripe", "Tailwind CSS"].map(t => (
@@ -44,7 +50,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Foto coi cuccioli — più calda, formato verticale */}
+        {/* Foto coi cuccioli — zoom su Federico */}
         <div style={{
           flex: "0 0 auto",
           width: "260px", height: "320px",
@@ -53,12 +59,17 @@ export default function Hero() {
           background: "#e4eaf2",
           border: "1px solid #c8d3e0",
           boxShadow: "0 8px 30px rgba(26,26,46,0.12)",
-          position: "relative" as const,
         }}>
           <img
             src="/federico-pups.jpg"
             alt="Federico De Micco"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{
+              width: "100%", height: "100%",
+              objectFit: "cover",
+              objectPosition: "center 25%",
+              transform: "scale(1.25)",
+              transformOrigin: "center 30%"
+            }}
           />
         </div>
       </div>
