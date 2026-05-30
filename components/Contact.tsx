@@ -11,7 +11,25 @@ export default function Contact() {
           <a href="mailto:federico.demicco@gmail.com" style={{ background: "transparent", color: "#fff", fontSize: "13px", fontWeight: 500, padding: "11px 22px", borderRadius: "100px", textDecoration: "none", border: "0.5px solid #3b4a6b" }}>Send an email</a>
         </div>
       </div>
-      <p style={{ fontSize: "11px", color: "#9ca3af", textAlign: "center", marginTop: "20px" }}>ABN 55 205 599 547 · federico.demicco@gmail.com</p>
+
+      {/* Easter egg: Bubu the avocado */}
+      <div style={{
+        display: "flex", alignItems: "center", justifyContent: "center",
+        gap: "10px", marginTop: "24px"
+      }}>
+        <img
+          src="/bubu.jpg"
+          alt="Bubu the avocado"
+          style={{ width: "26px", height: "26px", borderRadius: "50%", objectFit: "cover" }}
+        />
+        <p style={{ fontSize: "11px", color: "#9ca3af" }}>
+          Built by Federico, with moral support from Bubu, the cute Avocado right here :)
+        </p>
+      </div>
+
+      <p style={{ fontSize: "11px", color: "#9ca3af", textAlign: "center", marginTop: "8px" }}>
+        ABN 55 205 599 547 · federico.demicco@gmail.com
+      </p>
     </section>
   );
 }

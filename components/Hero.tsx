@@ -3,7 +3,7 @@ export default function Hero() {
     <section style={{ padding: "56px 0 48px" }}>
       <div style={{
         display: "flex",
-        gap: "40px",
+        gap: "44px",
         alignItems: "center",
         flexWrap: "wrap" as const,
       }}>
@@ -44,18 +44,19 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Foto a destra */}
+        {/* Foto coi cuccioli — più calda, formato verticale */}
         <div style={{
           flex: "0 0 auto",
-          width: "240px", height: "240px",
+          width: "260px", height: "320px",
           borderRadius: "24px",
           overflow: "hidden",
           background: "#e4eaf2",
           border: "1px solid #c8d3e0",
           boxShadow: "0 8px 30px rgba(26,26,46,0.12)",
+          position: "relative" as const,
         }}>
           <img
-            src="/federico.jpg"
+            src="/federico-pups.jpg"
             alt="Federico De Micco"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
