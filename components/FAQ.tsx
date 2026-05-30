@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "What if the site breaks after launch?",
-    a: "I fix any bugs for free, no time limit. If it broke because something I built has an issue, that's on me — not on you.",
+    a: "For the first 30 days after launch, I fix any bugs for free. After that, fixes are quick and reasonably priced — no monthly retainer required.",
   },
   {
     q: "Can you also handle Google ads or social media?",

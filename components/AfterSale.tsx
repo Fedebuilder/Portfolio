@@ -1,23 +1,18 @@
 const items = [
   {
     icon: "🛠️",
-    title: "Free bug support, no time limit",
-    desc: "If anything breaks on the site I built, I fix it for free. No monthly retainer, no fine print. It's the right thing to do.",
+    title: "30 days of free bug fixes",
+    desc: "After launch, you get a full month where I fix anything that breaks, at no cost. Most issues surface in the first few weeks — that's when I cover them.",
   },
   {
     icon: "🔑",
     title: "You own the code",
-    desc: "Full source on GitHub, transferred to your account. If we ever stop working together, any developer can pick up where I left off.",
+    desc: "Full source on GitHub, transferred to your account. If we ever stop working together, any developer can pick up exactly where I left off.",
   },
   {
     icon: "📬",
-    title: "Want changes later? Two ways",
-    desc: "Either reach out to me directly for an update, or hand the code to another developer. Your choice, always.",
-  },
-  {
-    icon: "📘",
-    title: "Plain-English handover guide",
-    desc: "A short doc that explains how to update text, swap photos, or change opening hours yourself — without touching code.",
+    title: "Want changes later? Just ask",
+    desc: "Need updates after the first month? Send me a message — small tweaks are quick and cheap, bigger redesigns get a clear quote. No retainer, no surprise invoices.",
   },
 ];
 
@@ -36,13 +31,13 @@ export default function AfterSale() {
           Fair question. Here&apos;s how I make sure that&apos;s never a problem.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
           {items.map(i => (
-            <div key={i.title} style={{ background: "#eef1f5", borderRadius: "14px", padding: "18px 20px" }}>
-              <div style={{ fontSize: "22px", marginBottom: "8px" }}>{i.icon}</div>
+            <div key={i.title} style={{ background: "#eef1f5", borderRadius: "14px", padding: "20px 22px" }}>
+              <div style={{ fontSize: "24px", marginBottom: "10px" }}>{i.icon}</div>
               <h3 style={{
                 fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600,
-                color: "#111827", marginBottom: "5px", letterSpacing: "-0.01em"
+                color: "#111827", marginBottom: "6px", letterSpacing: "-0.01em"
               }}>{i.title}</h3>
               <p style={{ fontSize: "12.5px", color: "#5a6475", lineHeight: 1.6 }}>{i.desc}</p>
             </div>
