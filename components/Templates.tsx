@@ -49,7 +49,51 @@ function PhysioTemplate() {
   );
 }
 
-// 2. PERSONAL TRAINER — nero/giallo neon, già piaciuto
+// 2. CAFÉ — brutalist tipografico, NO foto, testo enorme
+function CafeTemplate() {
+  const bg = "#FFEC3D", text = "#0d0d0d";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #0d0d0d", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="folkandcrumb.com.au" textColor="#666" />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `2px solid ${text}` }}>
+        <div style={{ fontSize: "15px", fontWeight: 900, color: text, letterSpacing: "-0.02em", textTransform: "uppercase" }}>★ Folk &amp; Crumb ★</div>
+        <div style={{ display: "flex", gap: "16px", fontSize: "11px", color: text, fontWeight: 600, alignItems: "center" }}>
+          <span style={{ textDecoration: "underline" }}>Menu</span>
+          <span>Find us</span>
+          <span>Wholesale</span>
+          <span style={{ background: text, color: bg, padding: "6px 14px", fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>View menu →</span>
+        </div>
+      </div>
+      <div style={{ padding: "40px 36px 30px", display: "flex", flexDirection: "column", gap: "20px", minHeight: "300px", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+        <div style={{ fontSize: "11px", fontWeight: 800, color: text, letterSpacing: "0.18em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
+          <span>● Newtown</span>
+          <span>● Open today · 7am — 3pm</span>
+          <span>● Est. 2019</span>
+        </div>
+        <h1 style={{ fontSize: "72px", fontWeight: 900, color: text, letterSpacing: "-0.04em", lineHeight: 0.88, margin: 0, textTransform: "uppercase" }}>
+          Slow coffee.<br />
+          <span style={{ WebkitTextStroke: `2px ${text}`, WebkitTextFillColor: "transparent" }}>Good bread.</span>
+        </h1>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "10px", gap: "24px" }}>
+          <p style={{ fontSize: "13px", color: text, lineHeight: 1.5, margin: 0, maxWidth: "300px", fontWeight: 500 }}>
+            Specialty espresso and sourdough, baked fresh every morning. A quiet corner spot to start the day right.
+          </p>
+          <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+            <div style={{ background: text, color: bg, padding: "12px 16px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>☕ Today&apos;s menu</div>
+            <div style={{ border: `2px solid ${text}`, color: text, padding: "10px 14px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>Find us →</div>
+          </div>
+        </div>
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: text, color: bg, padding: "8px 28px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.24em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
+          <span>★ Croissants out at 8am</span>
+          <span>★ Single origin espresso</span>
+          <span>★ Sourdough daily</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 3. PERSONAL TRAINER — nero/giallo neon
 function PersonalTrainerTemplate() {
   const bg = "#0d0d0d", text = "#fff", muted = "#b8b8b8", accent = "#e8ff00";
   return (
@@ -86,7 +130,7 @@ function PersonalTrainerTemplate() {
   );
 }
 
-// 3. DENTIST — blu pulito moderno
+// 4. DENTIST — blu pulito moderno
 function DentistTemplate() {
   const bg = "#f7faff", text = "#0f2540", muted = "#5a6c80", accent = "#2563eb";
   return (
@@ -123,132 +167,37 @@ function DentistTemplate() {
   );
 }
 
-// 4. LAWYER — magazine editoriale serio, NO foto, layout tipografico
-function LawyerTemplate() {
-  const bg = "#f5f3ef", text = "#1f1d17", muted = "#6b6558", accent = "#a07c3e";
-  return (
-    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #d6cfbe", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <BrowserBar domain="hartwellco.com.au" textColor="#8c8674" />
-      {/* Editorial header: centrato, serif, con linee */}
-      <div style={{ padding: "20px 28px 18px", textAlign: "center", borderBottom: `1px solid ${text}` }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "14px", marginBottom: "4px" }}>
-          <div style={{ flex: 1, height: "0.5px", background: text, opacity: 0.3 }} />
-          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "20px", fontWeight: 500, color: text, letterSpacing: "0.06em", textTransform: "uppercase" }}>Hartwell &amp; Co.</div>
-          <div style={{ flex: 1, height: "0.5px", background: text, opacity: 0.3 }} />
-        </div>
-        <div style={{ fontSize: "8px", color: muted, letterSpacing: "0.32em", textTransform: "uppercase" }}>Commercial Law · Sydney CBD · Established 2008</div>
-      </div>
-      {/* Editorial layout: 2 colonne testo, no foto */}
-      <div style={{ display: "flex", minHeight: "300px", padding: "40px 56px" }}>
-        <div style={{ flex: "1 1 50%", paddingRight: "32px", borderRight: `0.5px solid ${text}33` }}>
-          <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.24em", textTransform: "uppercase", fontWeight: 700, marginBottom: "12px" }}>— Vol. I · No. 1</div>
-          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "44px", fontWeight: 500, color: text, letterSpacing: "-0.03em", lineHeight: 0.98, margin: 0, marginBottom: "16px" }}>
-            Clear legal<br />
-            advice.<br />
-            <span style={{ fontStyle: "italic", color: accent }}>No jargon.</span>
-          </h1>
-          <p style={{ fontFamily: "'Fraunces', serif", fontSize: "13px", color: muted, lineHeight: 1.65, fontStyle: "italic", margin: 0 }}>
-            Commercial law and contracts for Sydney small businesses. Straight answers, transparent pricing, quick turnarounds.
-          </p>
-        </div>
-        <div style={{ flex: "1 1 50%", paddingLeft: "32px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-          <div>
-            <div style={{ fontSize: "9px", color: muted, letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "14px" }}>Practice areas</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-              {["Commercial contracts", "Business formation", "Employment law", "Dispute resolution"].map((s, i) => (
-                <div key={s} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", paddingBottom: "6px", borderBottom: `0.5px dotted ${text}33` }}>
-                  <span style={{ fontFamily: "'Fraunces', serif", fontSize: "13px", color: text }}>{s}</span>
-                  <span style={{ fontFamily: "'Fraunces', serif", fontSize: "10px", color: muted, fontStyle: "italic" }}>0{i + 1}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div style={{ marginTop: "20px" }}>
-            <span style={{ background: text, color: bg, fontSize: "11px", fontWeight: 600, padding: "10px 22px", borderRadius: "0", letterSpacing: "0.06em", textTransform: "uppercase", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Request a consult →</span>
-            <div style={{ fontSize: "10px", color: muted, marginTop: "10px", fontStyle: "italic" }}>Fixed fees · Response under 4 hours</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// 5. CAFÉ — brutalist tipografico, NO foto, testo enorme
-function CafeTemplate() {
-  const bg = "#FFEC3D", text = "#0d0d0d", accent = "#c4612a";
-  return (
-    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #0d0d0d", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <BrowserBar domain="folkandcrumb.com.au" textColor="#666" />
-      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `2px solid ${text}` }}>
-        <div style={{ fontSize: "15px", fontWeight: 900, color: text, letterSpacing: "-0.02em", textTransform: "uppercase" }}>★ Folk &amp; Crumb ★</div>
-        <div style={{ display: "flex", gap: "16px", fontSize: "11px", color: text, fontWeight: 600, alignItems: "center" }}>
-          <span style={{ textDecoration: "underline" }}>Menu</span>
-          <span>Find us</span>
-          <span>Wholesale</span>
-          <span style={{ background: text, color: bg, padding: "6px 14px", fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>View menu →</span>
-        </div>
-      </div>
-      <div style={{ padding: "40px 36px 30px", display: "flex", flexDirection: "column", gap: "20px", minHeight: "300px", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-        {/* Massive type */}
-        <div style={{ fontSize: "11px", fontWeight: 800, color: text, letterSpacing: "0.18em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
-          <span>● Newtown</span>
-          <span>● Open today · 7am — 3pm</span>
-          <span>● Est. 2019</span>
-        </div>
-        <h1 style={{ fontSize: "72px", fontWeight: 900, color: text, letterSpacing: "-0.04em", lineHeight: 0.88, margin: 0, textTransform: "uppercase" }}>
-          Slow coffee.<br />
-          <span style={{ WebkitTextStroke: `2px ${text}`, WebkitTextFillColor: "transparent" }}>Good bread.</span>
-        </h1>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "10px", gap: "24px" }}>
-          <p style={{ fontSize: "13px", color: text, lineHeight: 1.5, margin: 0, maxWidth: "300px", fontWeight: 500 }}>
-            Specialty espresso and sourdough, baked fresh every morning. A quiet corner spot to start the day right.
-          </p>
-          <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-            <div style={{ background: text, color: bg, padding: "12px 16px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>☕ Today&apos;s menu</div>
-            <div style={{ border: `2px solid ${text}`, color: text, padding: "10px 14px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>Find us →</div>
-          </div>
-        </div>
-        {/* Bottom strip — running marquee feel */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: text, color: bg, padding: "8px 28px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.24em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
-          <span>★ Croissants out at 8am</span>
-          <span>★ Single origin espresso</span>
-          <span>★ Sourdough daily</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// 6. YOGA STUDIO — boutique minimal lusso, NO foto, spazio bianco, palette quasi monocroma
+// 5. YOGA STUDIO — verde salvia + foto + card flottante (versione originale)
 function YogaTemplate() {
-  const bg = "#faf8f4", text = "#3a342a", muted = "#9c9485", accent = "#8b6f47";
+  const bg = "#f4f1ec", text = "#3a342a", muted = "#7a7263", accent = "#8b6f47";
   return (
-    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #e8e0d0", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <BrowserBar domain="stillstudio.com.au" textColor="#b8aa92" />
-      {/* Header minimal, molto spaziato */}
-      <div style={{ padding: "22px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ fontFamily: "'Fraunces', serif", fontSize: "18px", fontWeight: 400, color: text, letterSpacing: "0.04em" }}>still.</div>
-        <div style={{ display: "flex", gap: "26px", fontSize: "10px", color: muted, alignItems: "center", letterSpacing: "0.14em", textTransform: "uppercase" }}>
-          <span>Classes</span><span>Teachers</span><span>Pricing</span><span>Journal</span>
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #d6c9b5", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="stillstudio.com.au" textColor="#9c9485" />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(0,0,0,0.07)" }}>
+        <div>
+          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600, color: text, letterSpacing: "-0.01em" }}>Still Studio</div>
+          <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Yoga &amp; meditation · Mosman</div>
+        </div>
+        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
+          <span>Classes</span><span>Teachers</span><span>Pricing</span><span>Contact</span>
+          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600, marginLeft: "4px" }}>Book a class</span>
         </div>
       </div>
-      {/* Centered, lots of whitespace */}
-      <div style={{ padding: "60px 36px 50px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "20px", minHeight: "300px" }}>
-        <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.36em", textTransform: "uppercase", fontWeight: 500 }}>—— Yoga &amp; Meditation · Mosman ——</div>
-        <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "56px", fontWeight: 300, color: text, letterSpacing: "-0.02em", lineHeight: 1.05, margin: 0 }}>
-          Breathe.<br />
-          Move.<br />
-          <span style={{ fontStyle: "italic" }}>Return.</span>
-        </h1>
-        <p style={{ fontFamily: "'Fraunces', serif", fontSize: "14px", color: muted, lineHeight: 1.7, margin: 0, maxWidth: "380px", fontStyle: "italic" }}>
-          Vinyasa, yin and meditation in a quiet, light-filled studio. <br />All levels welcome.
-        </p>
-        <div style={{ display: "flex", gap: "12px", marginTop: "8px", alignItems: "center" }}>
-          <span style={{ background: text, color: bg, padding: "12px 28px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", borderRadius: "0" }}>Book a class</span>
-          <span style={{ color: text, padding: "12px 4px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", borderBottom: `0.5px solid ${text}` }}>Timetable</span>
+      <div style={{ display: "flex", minHeight: "340px" }}>
+        <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
+          <Badge bg="#ebe2d3" color="#6e5836" dot>First class free · Mosman</Badge>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "34px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
+            Breathe. Move.<br />
+            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>Return.</span>
+          </h1>
+          <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
+            Vinyasa, yin and meditation in a quiet, light-filled studio. All levels welcome — drop in any time, or join a course.
+          </p>
+          <CTAs primary="🧘 Book a class" secondary="See timetable →" accent={accent} accentText="#fff" borderColor="#d6c9b5" textColor={text} />
+          <Stats items={[{v:"20+",l:"Classes weekly"},{v:"8",l:"Teachers"},{v:"★ 5.0",l:"Students"}]} textColor={text} subtleColor="#9c9485" displayFont="'Fraunces', serif" borderColor="rgba(0,0,0,0.1)" />
         </div>
-        <div style={{ marginTop: "16px", fontSize: "10px", color: muted, letterSpacing: "0.12em", fontStyle: "italic" }}>
-          First class free · Next session today, 6pm yin
+        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
+          <FloatingCard label="Next class" value="Today, 6pm yin" displayFont="'Fraunces', serif" />
         </div>
       </div>
     </div>
@@ -312,11 +261,10 @@ function FloatingCard({ label, value, displayFont, bold }: { label: string; valu
 
 const tabs = [
   { name: "Physiotherapist", style: "Classic", comp: <PhysioTemplate /> },
+  { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
   { name: "Personal trainer", style: "Bold", comp: <PersonalTrainerTemplate /> },
   { name: "Dentist", style: "Clean", comp: <DentistTemplate /> },
-  { name: "Lawyer", style: "Editorial", comp: <LawyerTemplate /> },
-  { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
-  { name: "Yoga studio", style: "Minimal", comp: <YogaTemplate /> },
+  { name: "Yoga studio", style: "Warm", comp: <YogaTemplate /> },
 ];
 
 export default function Templates() {
@@ -331,10 +279,9 @@ export default function Templates() {
 
       <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
-          Six totally different design directions to show what&apos;s possible — your site can lean classic, bold, minimal, editorial, whatever fits your brand. Pick a vibe and we&apos;ll shape it around you.
+          Five totally different design directions to show what&apos;s possible — your site can lean classic, bold, minimal, brutalist, whatever fits your brand. Pick a vibe and we&apos;ll shape it around you.
         </p>
 
-        {/* Tabs */}
         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "18px" }}>
           {tabs.map((t, i) => (
             <button key={t.name} onClick={() => setIdx(i)} style={{
