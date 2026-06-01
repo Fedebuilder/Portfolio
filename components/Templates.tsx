@@ -1,414 +1,6 @@
 "use client";
 import { useState } from "react";
 
-type Template = {
-  profession: string;
-  // Business
-  businessName: string;
-  businessTagline: string;  // shown under logo in navbar
-  domain: string;
-  // Navbar
-  navLinks: string[];
-  ctaNav: string;
-  // Badge
-  badgeText: string;
-  // Hero copy
-  titleLine1: string;
-  titleLine2: string;       // italicised + accent colored
-  bio: string;
-  ctaPrimary: string;
-  ctaPrimaryIcon: string;
-  ctaSecondary: string;
-  // Stats (3 mini-stats)
-  stats: { value: string; label: string }[];
-  // Floating card on image
-  floatLabel: string;
-  floatValue: string;
-  // Colors
-  bg: string;
-  surface: string;
-  text: string;
-  textMuted: string;
-  textSubtle: string;
-  accent: string;
-  accentText: string;
-  accentBorder: string;
-  badgeBg: string;
-  badgeText2: string;
-  // Fonts
-  fontSans: string;
-  fontDisplay: string;
-  italicAccent: string;
-  // Image
-  imageUrl: string;
-};
-
-const templates: Template[] = [
-  {
-    profession: "Physiotherapist",
-    businessName: "Sarah Mitchell",
-    businessTagline: "Physiotherapist · Bondi",
-    domain: "sarahmitchell.com.au",
-    navLinks: ["Services", "About", "Reviews", "Contact"],
-    ctaNav: "Book now",
-    badgeText: "Accepting new patients · Bondi",
-    titleLine1: "Move better,",
-    titleLine2: "live stronger.",
-    bio: "Sports rehab and chronic pain recovery in Bondi. Tailored treatment plans, no guesswork, no rushed appointments.",
-    ctaPrimary: "Book on WhatsApp",
-    ctaPrimaryIcon: "📱",
-    ctaSecondary: "See services →",
-    stats: [
-      { value: "10+", label: "Years exp." },
-      { value: "800+", label: "Patients" },
-      { value: "★ 5.0", label: "Google reviews" },
-    ],
-    floatLabel: "Next available",
-    floatValue: "Tomorrow, 10am",
-    bg: "#f4f7f5",
-    surface: "#ffffff",
-    text: "#1a2e2a",
-    textMuted: "#5a6b65",
-    textSubtle: "#7a8a85",
-    accent: "#2d6a4f",
-    accentText: "#ffffff",
-    accentBorder: "#c8d3c2",
-    badgeBg: "#dcf2e6",
-    badgeText2: "#2d6a4f",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Fraunces', serif",
-    italicAccent: "#2d6a4f",
-    imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop",
-  },
-  {
-    profession: "Personal trainer",
-    businessName: "Max Reilly",
-    businessTagline: "Strength coach · Surry Hills",
-    domain: "maxreilly.com.au",
-    navLinks: ["Programs", "Results", "Pricing", "Contact"],
-    ctaNav: "Start now",
-    badgeText: "3 spots open this month",
-    titleLine1: "Train smart.",
-    titleLine2: "Get strong.",
-    bio: "1-on-1 strength coaching in Surry Hills. Real progress, real numbers, no quick fixes or gimmicks.",
-    ctaPrimary: "Get my plan",
-    ctaPrimaryIcon: "⚡",
-    ctaSecondary: "See results →",
-    stats: [
-      { value: "120+", label: "Clients trained" },
-      { value: "8 yrs", label: "Coaching" },
-      { value: "★ 4.9", label: "Average rating" },
-    ],
-    floatLabel: "Free intro session",
-    floatValue: "This week only",
-    bg: "#0d0d0d",
-    surface: "#181818",
-    text: "#ffffff",
-    textMuted: "#b8b8b8",
-    textSubtle: "#7a7a7a",
-    accent: "#e8ff00",
-    accentText: "#0d0d0d",
-    accentBorder: "#2a2a2a",
-    badgeBg: "#1f1f1f",
-    badgeText2: "#e8ff00",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Plus Jakarta Sans', sans-serif",
-    italicAccent: "#e8ff00",
-    imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop",
-  },
-  {
-    profession: "Dentist",
-    businessName: "Coogee Smile",
-    businessTagline: "Dental clinic · Coogee Beach",
-    domain: "coogeesmile.com.au",
-    navLinks: ["Treatments", "Team", "Fees", "Contact"],
-    ctaNav: "Book check-up",
-    badgeText: "Bulk-billing available · Coogee",
-    titleLine1: "Modern dentistry,",
-    titleLine2: "gentle care.",
-    bio: "General and cosmetic dentistry by the beach. Family-friendly, anxiety-aware, and never in a hurry.",
-    ctaPrimary: "Book a check-up",
-    ctaPrimaryIcon: "📅",
-    ctaSecondary: "Meet the team →",
-    stats: [
-      { value: "15+", label: "Years caring" },
-      { value: "2,000+", label: "Happy patients" },
-      { value: "★ 4.9", label: "Google reviews" },
-    ],
-    floatLabel: "Open today",
-    floatValue: "Until 6:30 pm",
-    bg: "#f7faff",
-    surface: "#ffffff",
-    text: "#0f2540",
-    textMuted: "#5a6c80",
-    textSubtle: "#8a99b0",
-    accent: "#2563eb",
-    accentText: "#ffffff",
-    accentBorder: "#cad8eb",
-    badgeBg: "#dbeafe",
-    badgeText2: "#1d4ed8",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Fraunces', serif",
-    italicAccent: "#2563eb",
-    imageUrl: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80&auto=format&fit=crop",
-  },
-  {
-    profession: "Lawyer",
-    businessName: "Hartwell & Co.",
-    businessTagline: "Commercial law · Sydney CBD",
-    domain: "hartwellco.com.au",
-    navLinks: ["Practice areas", "Team", "Insights", "Contact"],
-    ctaNav: "Request a call",
-    badgeText: "Fixed fees · No surprises",
-    titleLine1: "Clear legal advice.",
-    titleLine2: "No jargon.",
-    bio: "Commercial law and contracts for Sydney small businesses. Straight answers, transparent pricing, and quick turnarounds.",
-    ctaPrimary: "Request a consult",
-    ctaPrimaryIcon: "✉",
-    ctaSecondary: "Our work →",
-    stats: [
-      { value: "20 yrs", label: "Combined exp." },
-      { value: "300+", label: "Matters resolved" },
-      { value: "★ 5.0", label: "Client reviews" },
-    ],
-    floatLabel: "Response time",
-    floatValue: "Under 4 hours",
-    bg: "#f5f3ef",
-    surface: "#ffffff",
-    text: "#1f1d17",
-    textMuted: "#6b6558",
-    textSubtle: "#8c8674",
-    accent: "#1f1d17",
-    accentText: "#f5f3ef",
-    accentBorder: "#d6cfbe",
-    badgeBg: "#ece4d3",
-    badgeText2: "#6b5a35",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Fraunces', serif",
-    italicAccent: "#a07c3e",
-    imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&auto=format&fit=crop",
-  },
-  {
-    profession: "Café",
-    businessName: "Folk & Crumb",
-    businessTagline: "Coffee & bakery · Newtown",
-    domain: "folkandcrumb.com.au",
-    navLinks: ["Menu", "Find us", "Wholesale", "Contact"],
-    ctaNav: "View menu",
-    badgeText: "Open today · 7am to 3pm",
-    titleLine1: "Slow coffee,",
-    titleLine2: "good bread.",
-    bio: "Specialty espresso and sourdough, baked fresh every morning. A quiet corner spot in Newtown to start the day right.",
-    ctaPrimary: "See today's menu",
-    ctaPrimaryIcon: "☕",
-    ctaSecondary: "Find us →",
-    stats: [
-      { value: "6am", label: "Bakers in" },
-      { value: "12+", label: "Pastries daily" },
-      { value: "★ 4.8", label: "Google reviews" },
-    ],
-    floatLabel: "Just out of the oven",
-    floatValue: "Croissants, 8am",
-    bg: "#faf6f0",
-    surface: "#ffffff",
-    text: "#3d2817",
-    textMuted: "#7a6553",
-    textSubtle: "#9b8b78",
-    accent: "#c4612a",
-    accentText: "#ffffff",
-    accentBorder: "#e5d3bc",
-    badgeBg: "#fce8d4",
-    badgeText2: "#a04a18",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Fraunces', serif",
-    italicAccent: "#c4612a",
-    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop",
-  },
-  {
-    profession: "Yoga studio",
-    businessName: "Still Studio",
-    businessTagline: "Yoga & meditation · Mosman",
-    domain: "stillstudio.com.au",
-    navLinks: ["Classes", "Teachers", "Pricing", "Contact"],
-    ctaNav: "Book a class",
-    badgeText: "First class free · Mosman",
-    titleLine1: "Breathe. Move.",
-    titleLine2: "Return.",
-    bio: "Vinyasa, yin and meditation in a quiet, light-filled studio. All levels welcome — drop in any time, or join a course.",
-    ctaPrimary: "Book a class",
-    ctaPrimaryIcon: "🧘",
-    ctaSecondary: "See timetable →",
-    stats: [
-      { value: "20+", label: "Classes weekly" },
-      { value: "8", label: "Teachers" },
-      { value: "★ 5.0", label: "Student reviews" },
-    ],
-    floatLabel: "Next class",
-    floatValue: "Today, 6pm yin",
-    bg: "#f4f1ec",
-    surface: "#ffffff",
-    text: "#3a342a",
-    textMuted: "#7a7263",
-    textSubtle: "#9c9485",
-    accent: "#8b6f47",
-    accentText: "#ffffff",
-    accentBorder: "#d6c9b5",
-    badgeBg: "#ebe2d3",
-    badgeText2: "#6e5836",
-    fontSans: "'Plus Jakarta Sans', sans-serif",
-    fontDisplay: "'Fraunces', serif",
-    italicAccent: "#8b6f47",
-    imageUrl: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80&auto=format&fit=crop",
-  },
-];
-
-function MiniHero({ t }: { t: Template }) {
-  const isDark = t.bg === "#0d0d0d";
-  return (
-    <div style={{
-      background: t.bg,
-      borderRadius: "16px",
-      overflow: "hidden",
-      border: `1px solid ${isDark ? "#2a2a2a" : "#c8d3e0"}`,
-      width: "100%",
-      boxShadow: "0 8px 30px rgba(26,26,46,0.08)",
-      fontFamily: t.fontSans,
-    }}>
-      {/* Browser bar */}
-      <div style={{
-        background: isDark ? "#1f1f1f" : "#ffffff",
-        padding: "10px 14px",
-        borderBottom: `1px solid ${isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.06)"}`,
-        display: "flex", alignItems: "center", gap: "6px",
-      }}>
-        <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#ff5f57" }} />
-        <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#febc2e" }} />
-        <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#28c840" }} />
-        <div style={{ flex: 1, marginLeft: "10px", fontSize: "11px", color: t.textSubtle }}>
-          {t.domain}
-        </div>
-      </div>
-
-      {/* Mini navbar */}
-      <div style={{
-        background: t.bg,
-        padding: "14px 28px",
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        borderBottom: `0.5px solid ${isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.07)"}`,
-      }}>
-        <div>
-          <div style={{
-            fontFamily: t.fontDisplay, fontSize: "15px",
-            fontWeight: 600, color: t.text, letterSpacing: "-0.01em",
-          }}>{t.businessName}</div>
-          <div style={{
-            fontSize: "8px", letterSpacing: "0.18em",
-            color: t.textMuted, textTransform: "uppercase" as const, marginTop: "1px",
-          }}>{t.businessTagline}</div>
-        </div>
-        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: t.textMuted, alignItems: "center" }}>
-          {t.navLinks.map(l => <span key={l}>{l}</span>)}
-          <span style={{
-            background: t.accent, color: t.accentText,
-            padding: "5px 12px", borderRadius: "100px",
-            fontSize: "10px", fontWeight: 600, marginLeft: "4px",
-          }}>{t.ctaNav}</span>
-        </div>
-      </div>
-
-      {/* Hero content */}
-      <div style={{ display: "flex", minHeight: "340px" }}>
-        {/* Left: text */}
-        <div style={{
-          flex: "1 1 56%",
-          padding: "36px 36px 32px",
-          display: "flex", flexDirection: "column" as const, justifyContent: "center", gap: "14px",
-        }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "6px",
-            background: t.badgeBg, color: t.badgeText2,
-            fontSize: "10px", fontWeight: 600,
-            padding: "4px 11px", borderRadius: "100px",
-            width: "fit-content",
-          }}>
-            <span style={{ width: "5px", height: "5px", background: t.badgeText2, borderRadius: "50%" }} />
-            {t.badgeText}
-          </div>
-
-          <h1 style={{
-            fontFamily: t.fontDisplay,
-            fontSize: "34px", fontWeight: 600,
-            color: t.text, letterSpacing: "-0.025em",
-            lineHeight: 1.05, margin: 0,
-          }}>
-            {t.titleLine1}<br />
-            <span style={{ fontStyle: "italic" as const, fontWeight: 500, color: t.italicAccent }}>
-              {t.titleLine2}
-            </span>
-          </h1>
-
-          <p style={{
-            fontSize: "13px", color: t.textMuted, lineHeight: 1.6,
-            margin: 0, maxWidth: "330px",
-          }}>{t.bio}</p>
-
-          <div style={{ display: "flex", gap: "8px", marginTop: "4px", flexWrap: "wrap" as const }}>
-            <span style={{
-              background: t.accent, color: t.accentText,
-              fontSize: "11px", fontWeight: 600,
-              padding: "9px 18px", borderRadius: "100px",
-              display: "inline-flex", alignItems: "center", gap: "6px",
-            }}>
-              <span>{t.ctaPrimaryIcon}</span> {t.ctaPrimary}
-            </span>
-            <span style={{
-              background: "transparent", color: t.text,
-              fontSize: "11px", fontWeight: 500,
-              padding: "9px 18px", borderRadius: "100px",
-              border: `1px solid ${t.accentBorder}`,
-            }}>{t.ctaSecondary}</span>
-          </div>
-
-          {/* Stats row */}
-          <div style={{
-            display: "flex", gap: "20px", marginTop: "16px",
-            paddingTop: "16px",
-            borderTop: `0.5px solid ${isDark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.1)"}`,
-          }}>
-            {t.stats.map(s => (
-              <div key={s.label}>
-                <div style={{ fontFamily: t.fontDisplay, fontSize: "17px", fontWeight: 600, color: t.text }}>{s.value}</div>
-                <div style={{ fontSize: "9px", color: t.textSubtle, letterSpacing: "0.05em", textTransform: "uppercase" as const }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right: image */}
-        <div style={{
-          flex: "0 0 44%",
-          position: "relative" as const,
-          background: `url("${t.imageUrl}") center/cover`,
-          margin: "20px 20px 20px 0",
-          borderRadius: "14px",
-        }}>
-          <div style={{
-            position: "absolute" as const,
-            bottom: "16px", left: "16px",
-            background: "#ffffff",
-            borderRadius: "12px",
-            padding: "10px 14px",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
-          }}>
-            <div style={{ fontSize: "9px", color: "#7a8a85", letterSpacing: "0.06em", textTransform: "uppercase" as const, marginBottom: "2px" }}>{t.floatLabel}</div>
-            <div style={{ fontFamily: t.fontDisplay, fontSize: "13px", fontWeight: 600, color: "#1a2e2a" }}>{t.floatValue}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const included = [
   "Mobile-first responsive design",
   "WhatsApp direct contact integration",
@@ -418,53 +10,354 @@ const included = [
   "Fast hosting on Vercel (free)",
 ];
 
+// =============== INDIVIDUAL TEMPLATE COMPONENTS ===============
+
+// 1. PHYSIOTHERAPIST — verde salvia, foto nuova, layout pulito classico
+function PhysioTemplate() {
+  const bg = "#f4f7f5", text = "#1a2e2a", muted = "#5a6b65", accent = "#2d6a4f";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #c8d3e0", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="sarahmitchell.com.au" textColor="#9ca3af" />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(0,0,0,0.07)" }}>
+        <div>
+          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600, color: text, letterSpacing: "-0.01em" }}>Sarah Mitchell</div>
+          <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Physiotherapist · Bondi</div>
+        </div>
+        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
+          <span>Services</span><span>About</span><span>Reviews</span><span>Contact</span>
+          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600, marginLeft: "4px" }}>Book now</span>
+        </div>
+      </div>
+      <div style={{ display: "flex", minHeight: "340px" }}>
+        <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
+          <Badge bg="#dcf2e6" color={accent} dot={true}>Accepting new patients · Bondi</Badge>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "34px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
+            Move better,<br />
+            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>live stronger.</span>
+          </h1>
+          <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
+            Sports rehab and chronic pain recovery in Bondi. Tailored treatment plans, no guesswork, no rushed appointments.
+          </p>
+          <CTAs primary="📱 Book on WhatsApp" secondary="See services →" accent={accent} accentText="#fff" borderColor="#c8d3c2" textColor={text} />
+          <Stats items={[{v:"10+",l:"Years exp."},{v:"800+",l:"Patients"},{v:"★ 5.0",l:"Google reviews"}]} textColor={text} subtleColor="#7a8a85" displayFont="'Fraunces', serif" borderColor="rgba(0,0,0,0.1)" />
+        </div>
+        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
+          <FloatingCard label="Next available" value="Tomorrow, 10am" displayFont="'Fraunces', serif" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 2. PERSONAL TRAINER — nero/giallo neon, già piaciuto
+function PersonalTrainerTemplate() {
+  const bg = "#0d0d0d", text = "#fff", muted = "#b8b8b8", accent = "#e8ff00";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #2a2a2a", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="maxreilly.com.au" textColor="#7a7a7a" dark />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(255,255,255,0.08)" }}>
+        <div>
+          <div style={{ fontSize: "15px", fontWeight: 700, color: text, letterSpacing: "-0.01em" }}>MAX REILLY</div>
+          <div style={{ fontSize: "8px", letterSpacing: "0.22em", color: accent, textTransform: "uppercase", marginTop: "1px", fontWeight: 600 }}>Strength coach · Surry Hills</div>
+        </div>
+        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
+          <span>Programs</span><span>Results</span><span>Pricing</span><span>Contact</span>
+          <span style={{ background: accent, color: "#0d0d0d", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 700, marginLeft: "4px" }}>Start now</span>
+        </div>
+      </div>
+      <div style={{ display: "flex", minHeight: "340px" }}>
+        <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
+          <Badge bg="#1f1f1f" color={accent} dot>3 spots open this month</Badge>
+          <h1 style={{ fontSize: "38px", fontWeight: 800, color: text, letterSpacing: "-0.035em", lineHeight: 0.95, margin: 0, textTransform: "uppercase" }}>
+            Train smart.<br />
+            <span style={{ color: accent }}>Get strong.</span>
+          </h1>
+          <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
+            1-on-1 strength coaching in Surry Hills. Real progress, real numbers, no quick fixes or gimmicks.
+          </p>
+          <CTAs primary="⚡ Get my plan" secondary="See results →" accent={accent} accentText="#0d0d0d" borderColor="#2a2a2a" textColor={text} />
+          <Stats items={[{v:"120+",l:"Clients trained"},{v:"8 yrs",l:"Coaching"},{v:"★ 4.9",l:"Avg rating"}]} textColor={text} subtleColor="#7a7a7a" displayFont="'Plus Jakarta Sans', sans-serif" borderColor="rgba(255,255,255,0.12)" />
+        </div>
+        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
+          <FloatingCard label="Free intro session" value="This week only" displayFont="'Plus Jakarta Sans', sans-serif" bold />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 3. DENTIST — blu pulito moderno
+function DentistTemplate() {
+  const bg = "#f7faff", text = "#0f2540", muted = "#5a6c80", accent = "#2563eb";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #c8d3e0", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="coogeesmile.com.au" textColor="#8a99b0" />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(0,0,0,0.07)" }}>
+        <div>
+          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600, color: text, letterSpacing: "-0.01em" }}>Coogee Smile</div>
+          <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Dental clinic · Coogee Beach</div>
+        </div>
+        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
+          <span>Treatments</span><span>Team</span><span>Fees</span><span>Contact</span>
+          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600, marginLeft: "4px" }}>Book check-up</span>
+        </div>
+      </div>
+      <div style={{ display: "flex", minHeight: "340px" }}>
+        <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
+          <Badge bg="#dbeafe" color="#1d4ed8" dot>Bulk-billing available · Coogee</Badge>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "34px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
+            Modern dentistry,<br />
+            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>gentle care.</span>
+          </h1>
+          <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
+            General and cosmetic dentistry by the beach. Family-friendly, anxiety-aware, and never in a hurry.
+          </p>
+          <CTAs primary="📅 Book a check-up" secondary="Meet the team →" accent={accent} accentText="#fff" borderColor="#cad8eb" textColor={text} />
+          <Stats items={[{v:"15+",l:"Years caring"},{v:"2,000+",l:"Patients"},{v:"★ 4.9",l:"Google"}]} textColor={text} subtleColor="#8a99b0" displayFont="'Fraunces', serif" borderColor="rgba(0,0,0,0.1)" />
+        </div>
+        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
+          <FloatingCard label="Open today" value="Until 6:30 pm" displayFont="'Fraunces', serif" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 4. LAWYER — magazine editoriale serio, NO foto, layout tipografico
+function LawyerTemplate() {
+  const bg = "#f5f3ef", text = "#1f1d17", muted = "#6b6558", accent = "#a07c3e";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #d6cfbe", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="hartwellco.com.au" textColor="#8c8674" />
+      {/* Editorial header: centrato, serif, con linee */}
+      <div style={{ padding: "20px 28px 18px", textAlign: "center", borderBottom: `1px solid ${text}` }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "14px", marginBottom: "4px" }}>
+          <div style={{ flex: 1, height: "0.5px", background: text, opacity: 0.3 }} />
+          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "20px", fontWeight: 500, color: text, letterSpacing: "0.06em", textTransform: "uppercase" }}>Hartwell &amp; Co.</div>
+          <div style={{ flex: 1, height: "0.5px", background: text, opacity: 0.3 }} />
+        </div>
+        <div style={{ fontSize: "8px", color: muted, letterSpacing: "0.32em", textTransform: "uppercase" }}>Commercial Law · Sydney CBD · Established 2008</div>
+      </div>
+      {/* Editorial layout: 2 colonne testo, no foto */}
+      <div style={{ display: "flex", minHeight: "300px", padding: "40px 56px" }}>
+        <div style={{ flex: "1 1 50%", paddingRight: "32px", borderRight: `0.5px solid ${text}33` }}>
+          <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.24em", textTransform: "uppercase", fontWeight: 700, marginBottom: "12px" }}>— Vol. I · No. 1</div>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "44px", fontWeight: 500, color: text, letterSpacing: "-0.03em", lineHeight: 0.98, margin: 0, marginBottom: "16px" }}>
+            Clear legal<br />
+            advice.<br />
+            <span style={{ fontStyle: "italic", color: accent }}>No jargon.</span>
+          </h1>
+          <p style={{ fontFamily: "'Fraunces', serif", fontSize: "13px", color: muted, lineHeight: 1.65, fontStyle: "italic", margin: 0 }}>
+            Commercial law and contracts for Sydney small businesses. Straight answers, transparent pricing, quick turnarounds.
+          </p>
+        </div>
+        <div style={{ flex: "1 1 50%", paddingLeft: "32px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+          <div>
+            <div style={{ fontSize: "9px", color: muted, letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 700, marginBottom: "14px" }}>Practice areas</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+              {["Commercial contracts", "Business formation", "Employment law", "Dispute resolution"].map((s, i) => (
+                <div key={s} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", paddingBottom: "6px", borderBottom: `0.5px dotted ${text}33` }}>
+                  <span style={{ fontFamily: "'Fraunces', serif", fontSize: "13px", color: text }}>{s}</span>
+                  <span style={{ fontFamily: "'Fraunces', serif", fontSize: "10px", color: muted, fontStyle: "italic" }}>0{i + 1}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div style={{ marginTop: "20px" }}>
+            <span style={{ background: text, color: bg, fontSize: "11px", fontWeight: 600, padding: "10px 22px", borderRadius: "0", letterSpacing: "0.06em", textTransform: "uppercase", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Request a consult →</span>
+            <div style={{ fontSize: "10px", color: muted, marginTop: "10px", fontStyle: "italic" }}>Fixed fees · Response under 4 hours</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 5. CAFÉ — brutalist tipografico, NO foto, testo enorme
+function CafeTemplate() {
+  const bg = "#FFEC3D", text = "#0d0d0d", accent = "#c4612a";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #0d0d0d", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="folkandcrumb.com.au" textColor="#666" />
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `2px solid ${text}` }}>
+        <div style={{ fontSize: "15px", fontWeight: 900, color: text, letterSpacing: "-0.02em", textTransform: "uppercase" }}>★ Folk &amp; Crumb ★</div>
+        <div style={{ display: "flex", gap: "16px", fontSize: "11px", color: text, fontWeight: 600, alignItems: "center" }}>
+          <span style={{ textDecoration: "underline" }}>Menu</span>
+          <span>Find us</span>
+          <span>Wholesale</span>
+          <span style={{ background: text, color: bg, padding: "6px 14px", fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em" }}>View menu →</span>
+        </div>
+      </div>
+      <div style={{ padding: "40px 36px 30px", display: "flex", flexDirection: "column", gap: "20px", minHeight: "300px", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+        {/* Massive type */}
+        <div style={{ fontSize: "11px", fontWeight: 800, color: text, letterSpacing: "0.18em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
+          <span>● Newtown</span>
+          <span>● Open today · 7am — 3pm</span>
+          <span>● Est. 2019</span>
+        </div>
+        <h1 style={{ fontSize: "72px", fontWeight: 900, color: text, letterSpacing: "-0.04em", lineHeight: 0.88, margin: 0, textTransform: "uppercase" }}>
+          Slow coffee.<br />
+          <span style={{ WebkitTextStroke: `2px ${text}`, WebkitTextFillColor: "transparent" }}>Good bread.</span>
+        </h1>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginTop: "10px", gap: "24px" }}>
+          <p style={{ fontSize: "13px", color: text, lineHeight: 1.5, margin: 0, maxWidth: "300px", fontWeight: 500 }}>
+            Specialty espresso and sourdough, baked fresh every morning. A quiet corner spot to start the day right.
+          </p>
+          <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+            <div style={{ background: text, color: bg, padding: "12px 16px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>☕ Today&apos;s menu</div>
+            <div style={{ border: `2px solid ${text}`, color: text, padding: "10px 14px", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em" }}>Find us →</div>
+          </div>
+        </div>
+        {/* Bottom strip — running marquee feel */}
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, background: text, color: bg, padding: "8px 28px", fontSize: "10px", fontWeight: 700, letterSpacing: "0.24em", textTransform: "uppercase", display: "flex", justifyContent: "space-between" }}>
+          <span>★ Croissants out at 8am</span>
+          <span>★ Single origin espresso</span>
+          <span>★ Sourdough daily</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// 6. YOGA STUDIO — boutique minimal lusso, NO foto, spazio bianco, palette quasi monocroma
+function YogaTemplate() {
+  const bg = "#faf8f4", text = "#3a342a", muted = "#9c9485", accent = "#8b6f47";
+  return (
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #e8e0d0", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <BrowserBar domain="stillstudio.com.au" textColor="#b8aa92" />
+      {/* Header minimal, molto spaziato */}
+      <div style={{ padding: "22px 36px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ fontFamily: "'Fraunces', serif", fontSize: "18px", fontWeight: 400, color: text, letterSpacing: "0.04em" }}>still.</div>
+        <div style={{ display: "flex", gap: "26px", fontSize: "10px", color: muted, alignItems: "center", letterSpacing: "0.14em", textTransform: "uppercase" }}>
+          <span>Classes</span><span>Teachers</span><span>Pricing</span><span>Journal</span>
+        </div>
+      </div>
+      {/* Centered, lots of whitespace */}
+      <div style={{ padding: "60px 36px 50px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "20px", minHeight: "300px" }}>
+        <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.36em", textTransform: "uppercase", fontWeight: 500 }}>—— Yoga &amp; Meditation · Mosman ——</div>
+        <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "56px", fontWeight: 300, color: text, letterSpacing: "-0.02em", lineHeight: 1.05, margin: 0 }}>
+          Breathe.<br />
+          Move.<br />
+          <span style={{ fontStyle: "italic" }}>Return.</span>
+        </h1>
+        <p style={{ fontFamily: "'Fraunces', serif", fontSize: "14px", color: muted, lineHeight: 1.7, margin: 0, maxWidth: "380px", fontStyle: "italic" }}>
+          Vinyasa, yin and meditation in a quiet, light-filled studio. <br />All levels welcome.
+        </p>
+        <div style={{ display: "flex", gap: "12px", marginTop: "8px", alignItems: "center" }}>
+          <span style={{ background: text, color: bg, padding: "12px 28px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", borderRadius: "0" }}>Book a class</span>
+          <span style={{ color: text, padding: "12px 4px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", borderBottom: `0.5px solid ${text}` }}>Timetable</span>
+        </div>
+        <div style={{ marginTop: "16px", fontSize: "10px", color: muted, letterSpacing: "0.12em", fontStyle: "italic" }}>
+          First class free · Next session today, 6pm yin
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// =============== SHARED SMALL COMPONENTS ===============
+
+function BrowserBar({ domain, textColor, dark }: { domain: string; textColor: string; dark?: boolean }) {
+  return (
+    <div style={{ background: dark ? "#1f1f1f" : "#ffffff", padding: "10px 14px", borderBottom: dark ? "1px solid rgba(255,255,255,0.06)" : "1px solid rgba(0,0,0,0.06)", display: "flex", alignItems: "center", gap: "6px" }}>
+      <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#ff5f57" }} />
+      <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#febc2e" }} />
+      <div style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#28c840" }} />
+      <div style={{ flex: 1, marginLeft: "10px", fontSize: "11px", color: textColor }}>{domain}</div>
+    </div>
+  );
+}
+
+function Badge({ bg, color, dot, children }: { bg: string; color: string; dot?: boolean; children: React.ReactNode }) {
+  return (
+    <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: bg, color, fontSize: "10px", fontWeight: 600, padding: "4px 11px", borderRadius: "100px", width: "fit-content" }}>
+      {dot && <span style={{ width: "5px", height: "5px", background: color, borderRadius: "50%" }} />}
+      {children}
+    </div>
+  );
+}
+
+function CTAs({ primary, secondary, accent, accentText, borderColor, textColor }: { primary: string; secondary: string; accent: string; accentText: string; borderColor: string; textColor: string }) {
+  return (
+    <div style={{ display: "flex", gap: "8px", marginTop: "4px", flexWrap: "wrap" }}>
+      <span style={{ background: accent, color: accentText, fontSize: "11px", fontWeight: 600, padding: "9px 18px", borderRadius: "100px", display: "inline-flex", alignItems: "center", gap: "6px" }}>{primary}</span>
+      <span style={{ background: "transparent", color: textColor, fontSize: "11px", fontWeight: 500, padding: "9px 18px", borderRadius: "100px", border: `1px solid ${borderColor}` }}>{secondary}</span>
+    </div>
+  );
+}
+
+function Stats({ items, textColor, subtleColor, displayFont, borderColor }: { items: { v: string; l: string }[]; textColor: string; subtleColor: string; displayFont: string; borderColor: string }) {
+  return (
+    <div style={{ display: "flex", gap: "20px", marginTop: "16px", paddingTop: "16px", borderTop: `0.5px solid ${borderColor}` }}>
+      {items.map(s => (
+        <div key={s.l}>
+          <div style={{ fontFamily: displayFont, fontSize: "17px", fontWeight: 600, color: textColor }}>{s.v}</div>
+          <div style={{ fontSize: "9px", color: subtleColor, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s.l}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function FloatingCard({ label, value, displayFont, bold }: { label: string; value: string; displayFont: string; bold?: boolean }) {
+  return (
+    <div style={{ position: "absolute", bottom: "16px", left: "16px", background: "#fff", borderRadius: "12px", padding: "10px 14px", boxShadow: "0 4px 16px rgba(0,0,0,0.12)" }}>
+      <div style={{ fontSize: "9px", color: "#7a8a85", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "2px" }}>{label}</div>
+      <div style={{ fontFamily: displayFont, fontSize: "13px", fontWeight: bold ? 700 : 600, color: "#1a2e2a" }}>{value}</div>
+    </div>
+  );
+}
+
+// =============== MAIN COMPONENT ===============
+
+const tabs = [
+  { name: "Physiotherapist", style: "Classic", comp: <PhysioTemplate /> },
+  { name: "Personal trainer", style: "Bold", comp: <PersonalTrainerTemplate /> },
+  { name: "Dentist", style: "Clean", comp: <DentistTemplate /> },
+  { name: "Lawyer", style: "Editorial", comp: <LawyerTemplate /> },
+  { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
+  { name: "Yoga studio", style: "Minimal", comp: <YogaTemplate /> },
+];
+
 export default function Templates() {
   const [idx, setIdx] = useState(0);
-  const current = templates[idx];
-
   return (
     <section style={{ paddingBottom: "40px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "28px" }}>
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
-        <span style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase" as const, letterSpacing: "0.14em", color: "#3b82c4", whiteSpace: "nowrap" as const }}>What yours could look like</span>
+        <span style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#3b82c4", whiteSpace: "nowrap" }}>What yours could look like</span>
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
       <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
-          Six starting points to spark imagination — each one fully customised to your business, content and brand. Pick a style you like, and we&apos;ll shape it around you.
+          Six totally different design directions to show what&apos;s possible — your site can lean classic, bold, minimal, editorial, whatever fits your brand. Pick a vibe and we&apos;ll shape it around you.
         </p>
 
         {/* Tabs */}
-        <div style={{ display: "flex", flexWrap: "wrap" as const, gap: "8px", marginBottom: "18px" }}>
-          {templates.map((t, i) => (
-            <button
-              key={t.profession}
-              onClick={() => setIdx(i)}
-              style={{
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
-                fontSize: "12px", fontWeight: 600,
-                padding: "6px 14px", borderRadius: "100px",
-                border: i === idx ? "1px solid #1a1a2e" : "1px solid #c8d3e0",
-                background: i === idx ? "#1a1a2e" : "#fff",
-                color: i === idx ? "#fff" : "#374151",
-                cursor: "pointer",
-                transition: "all 0.15s",
-              }}
-            >
-              {t.profession}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "18px" }}>
+          {tabs.map((t, i) => (
+            <button key={t.name} onClick={() => setIdx(i)} style={{
+              fontFamily: "'Plus Jakarta Sans', sans-serif",
+              fontSize: "12px", fontWeight: 600,
+              padding: "6px 14px", borderRadius: "100px",
+              border: i === idx ? "1px solid #1a1a2e" : "1px solid #c8d3e0",
+              background: i === idx ? "#1a1a2e" : "#fff",
+              color: i === idx ? "#fff" : "#374151",
+              cursor: "pointer",
+              transition: "all 0.15s",
+              display: "inline-flex", alignItems: "center", gap: "8px",
+            }}>
+              <span>{t.name}</span>
+              <span style={{ fontSize: "9px", opacity: 0.6, fontWeight: 500 }}>{t.style}</span>
             </button>
           ))}
         </div>
 
-        {/* Mini hero preview */}
-        <div style={{ marginBottom: "20px" }}>
-          <MiniHero t={current} />
-        </div>
+        <div style={{ marginBottom: "20px" }}>{tabs[idx].comp}</div>
 
-        {/* What's included */}
         <div style={{ background: "#eef1f5", borderRadius: "14px", padding: "18px 22px" }}>
-          <p style={{ fontSize: "12px", fontWeight: 700, color: "#2563ab", marginBottom: "10px", textTransform: "uppercase" as const, letterSpacing: "0.06em" }}>
+          <p style={{ fontSize: "12px", fontWeight: 700, color: "#2563ab", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
             What&apos;s included in the base build
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 18px" }}>
