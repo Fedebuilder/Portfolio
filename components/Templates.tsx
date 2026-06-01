@@ -130,37 +130,69 @@ function PersonalTrainerTemplate() {
   );
 }
 
-// 4. DENTIST — blu pulito moderno
-function DentistTemplate() {
-  const bg = "#f7faff", text = "#0f2540", muted = "#5a6c80", accent = "#2563eb";
+// 4. TATTOO ARTIST — playful, rosa/viola/arancio, forme arrotondate
+function TattooArtistTemplate() {
+  const bg = "#FFE5D9", text = "#2a1a3e", muted = "#6b5478", accent = "#FF4D6D", accent2 = "#7B2CBF";
   return (
-    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #c8d3e0", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <BrowserBar domain="coogeesmile.com.au" textColor="#8a99b0" />
-      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(0,0,0,0.07)" }}>
-        <div>
-          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600, color: text, letterSpacing: "-0.01em" }}>Coogee Smile</div>
-          <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Dental clinic · Coogee Beach</div>
+    <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #f0c8b8", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif", position: "relative" }}>
+      {/* Decorative blob in background */}
+      <div style={{ position: "absolute", top: "-40px", right: "-60px", width: "240px", height: "240px", background: "#FFC4D6", borderRadius: "50%", opacity: 0.6, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: "-30px", left: "20%", width: "160px", height: "160px", background: "#E0B0FF", borderRadius: "50%", opacity: 0.4, pointerEvents: "none" }} />
+
+      <BrowserBar domain="leelovesink.com.au" textColor="#9c8499" />
+
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(123, 44, 191, 0.15)", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px" }}>🌸</div>
+          <div>
+            <div style={{ fontFamily: "'Fraunces', serif", fontSize: "16px", fontWeight: 600, color: text, letterSpacing: "-0.01em", fontStyle: "italic" }}>Lee Loves Ink</div>
+            <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Tattoo studio · Newtown</div>
+          </div>
         </div>
         <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
-          <span>Treatments</span><span>Team</span><span>Fees</span><span>Contact</span>
-          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600, marginLeft: "4px" }}>Book check-up</span>
+          <span>Gallery</span><span>Styles</span><span>FAQ</span><span>Contact</span>
+          <span style={{ background: text, color: bg, padding: "7px 16px", borderRadius: "100px", fontSize: "10px", fontWeight: 700, marginLeft: "4px" }}>Book a session</span>
         </div>
       </div>
-      <div style={{ display: "flex", minHeight: "340px" }}>
+
+      <div style={{ display: "flex", minHeight: "340px", position: "relative", zIndex: 1 }}>
         <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
-          <Badge bg="#dbeafe" color="#1d4ed8" dot>Bulk-billing available · Coogee</Badge>
-          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "34px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
-            Modern dentistry,<br />
-            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>gentle care.</span>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "#fff", color: accent2, fontSize: "10px", fontWeight: 700, padding: "5px 13px", borderRadius: "100px", width: "fit-content", border: `1.5px solid ${accent2}` }}>
+            <span style={{ width: "5px", height: "5px", background: accent, borderRadius: "50%" }} />
+            Books open for September ✨
+          </div>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "38px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1, margin: 0 }}>
+            Tiny tattoos.<br />
+            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>Big </span>
+            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent2 }}>feelings.</span>
           </h1>
           <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
-            General and cosmetic dentistry by the beach. Family-friendly, anxiety-aware, and never in a hurry.
+            Fine-line and floral work in a sunny Newtown studio. Walk-ins on Saturdays, custom designs by appointment.
           </p>
-          <CTAs primary="📅 Book a check-up" secondary="Meet the team →" accent={accent} accentText="#fff" borderColor="#cad8eb" textColor={text} />
-          <Stats items={[{v:"15+",l:"Years caring"},{v:"2,000+",l:"Patients"},{v:"★ 4.9",l:"Google"}]} textColor={text} subtleColor="#8a99b0" displayFont="'Fraunces', serif" borderColor="rgba(0,0,0,0.1)" />
+          <div style={{ display: "flex", gap: "8px", marginTop: "4px", flexWrap: "wrap" }}>
+            <span style={{ background: text, color: bg, fontSize: "11px", fontWeight: 700, padding: "10px 20px", borderRadius: "100px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              🌷 Book your piece
+            </span>
+            <span style={{ background: "transparent", color: text, fontSize: "11px", fontWeight: 600, padding: "10px 20px", borderRadius: "100px", border: `1.5px solid ${text}` }}>See gallery →</span>
+          </div>
+          {/* Pill-style stats */}
+          <div style={{ display: "flex", gap: "8px", marginTop: "16px", flexWrap: "wrap" }}>
+            <span style={{ background: "#fff", color: text, padding: "6px 13px", borderRadius: "100px", fontSize: "11px", fontWeight: 600, border: `1px solid ${accent}33` }}>
+              ✨ <strong style={{ color: accent }}>500+</strong> happy clients
+            </span>
+            <span style={{ background: "#fff", color: text, padding: "6px 13px", borderRadius: "100px", fontSize: "11px", fontWeight: 600, border: `1px solid ${accent2}33` }}>
+              🌟 <strong style={{ color: accent2 }}>5.0</strong> on Google
+            </span>
+          </div>
         </div>
-        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
-          <FloatingCard label="Open today" value="Until 6:30 pm" displayFont="'Fraunces', serif" />
+        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "24px" }}>
+          <div style={{ position: "absolute", bottom: "16px", left: "16px", background: "#fff", borderRadius: "100px", padding: "8px 14px 8px 8px", boxShadow: "0 4px 16px rgba(0,0,0,0.12)", display: "flex", alignItems: "center", gap: "8px" }}>
+            <div style={{ width: "28px", height: "28px", borderRadius: "50%", background: accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px" }}>🌷</div>
+            <div>
+              <div style={{ fontSize: "8px", color: "#7a8a85", letterSpacing: "0.06em", textTransform: "uppercase" }}>Next slot</div>
+              <div style={{ fontFamily: "'Fraunces', serif", fontSize: "12px", fontWeight: 600, color: text, fontStyle: "italic" }}>Sat at 2pm</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -263,7 +295,7 @@ const tabs = [
   { name: "Physiotherapist", style: "Classic", comp: <PhysioTemplate /> },
   { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
   { name: "Personal trainer", style: "Bold", comp: <PersonalTrainerTemplate /> },
-  { name: "Dentist", style: "Clean", comp: <DentistTemplate /> },
+  { name: "Tattoo artist", style: "Playful", comp: <TattooArtistTemplate /> },
   { name: "Yoga studio", style: "Warm", comp: <YogaTemplate /> },
 ];
 
