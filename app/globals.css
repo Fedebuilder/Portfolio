@@ -24,5 +24,7 @@ body {
 
   /* hero: stack + smaller headline */
   .hero-h1 { font-size: 32px !important; }
-  .hero-wrap { gap: 28px !important; }
+  .hero-wrap { gap: 28px !important; justify-content: center !important; }
+  /* center text + photo when stacked on mobile */
+  .hero-text { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
 }

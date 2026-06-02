@@ -8,7 +8,7 @@ export default function Hero() {
         flexWrap: "wrap" as const,
       }}>
         {/* Testo a sinistra */}
-        <div style={{ flex: "1 1 420px", minWidth: 0 }}>
+        <div className="hero-text" style={{ flex: "1 1 420px", minWidth: 0 }}>
           <div style={{
             display: "inline-flex", alignItems: "center", gap: "7px",
             background: "#ddeeff", color: "#2563ab", fontSize: "12px",
