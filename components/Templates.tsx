@@ -231,7 +231,7 @@ function TattooArtistTemplate() {
   );
 }
 
-// 5. YOGA STUDIO — editorial premium: aria, serif sicuro, foto cinematica edge-to-edge
+// 5. YOGA STUDIO — editorial premium + studio picker (Humming Puppy) + cookie consent giocoso (SKY TING)
 function YogaTemplate() {
   const bg = "#f5f1ea", text = "#2b2823", muted = "#8a8175", accent = "#9c8b6f", line = "#e2dac9";
   return (
@@ -250,34 +250,45 @@ function YogaTemplate() {
         </div>
       </div>
 
-      {/* Hero editoriale, molto aria */}
-      <div style={{ padding: "52px 44px 40px", textAlign: "center" }}>
-        <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.36em", textTransform: "uppercase", marginBottom: "22px" }}>Est. 2018 — Yoga &amp; Meditation, Mosman</div>
-        <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "50px", fontWeight: 300, color: text, letterSpacing: "-0.025em", lineHeight: 1.0, margin: 0 }}>
+      {/* Hero editoriale */}
+      <div style={{ padding: "44px 44px 30px", textAlign: "center" }}>
+        <div style={{ fontSize: "9px", color: accent, letterSpacing: "0.36em", textTransform: "uppercase", marginBottom: "20px" }}>Est. 2018 — Yoga &amp; Meditation</div>
+        <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "46px", fontWeight: 300, color: text, letterSpacing: "-0.025em", lineHeight: 1.0, margin: 0 }}>
           Stillness,<br /><span style={{ fontStyle: "italic" }}>in motion.</span>
         </h1>
-        <p style={{ fontSize: "12.5px", color: muted, lineHeight: 1.75, margin: "22px auto 0", maxWidth: "360px" }}>
-          Vinyasa, yin and meditation in a light-filled studio above the harbour. All levels welcome.
-        </p>
+
+        {/* Studio picker — ispirato Humming Puppy */}
+        <div style={{ marginTop: "28px" }}>
+          <div style={{ fontSize: "9px", color: muted, letterSpacing: "0.22em", textTransform: "uppercase", marginBottom: "14px" }}>Which studio are you looking for?</div>
+          <div style={{ display: "flex", gap: "8px", justifyContent: "center", flexWrap: "wrap" }}>
+            {[{ n: "Bondi", active: true }, { n: "Surry Hills" }, { n: "Online" }].map(s => (
+              <span key={s.n} style={{
+                fontSize: "10px", letterSpacing: "0.18em", textTransform: "uppercase",
+                padding: "10px 24px", border: `1px solid ${text}`,
+                background: s.active ? text : "transparent",
+                color: s.active ? bg : text, fontWeight: 500,
+              }}>{s.n}</span>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* Foto cinematica edge-to-edge, nessun testo sopra */}
-      <div style={{ height: "172px", background: `url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80&auto=format&fit=crop") center 38%/cover` }} />
-
-      {/* Barra dettagli raffinata: stats con divisori hairline + CTA */}
-      <div style={{ padding: "22px 44px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          {[{v:"20+",l:"Classes weekly"},{v:"8",l:"Teachers"},{v:"First class free",l:"New students"}].map((s, i) => (
-            <div key={s.l} style={{ display: "flex", alignItems: "center" }}>
-              {i > 0 && <div style={{ width: "0.5px", height: "30px", background: line, margin: "0 22px" }} />}
-              <div>
-                <div style={{ fontFamily: "'Fraunces', serif", fontSize: "16px", fontWeight: 400, color: text, fontStyle: "italic", lineHeight: 1 }}>{s.v}</div>
-                <div style={{ fontSize: "8px", color: muted, letterSpacing: "0.1em", textTransform: "uppercase", marginTop: "5px" }}>{s.l}</div>
-              </div>
-            </div>
-          ))}
+      {/* Foto cinematica edge-to-edge + cookie consent giocoso */}
+      <div style={{ position: "relative", height: "180px", background: `url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80&auto=format&fit=crop") center 38%/cover` }}>
+        {/* Cookie consent — ispirato SKY TING */}
+        <div style={{
+          position: "absolute", bottom: "16px", right: "18px",
+          background: "#fff", borderRadius: "12px", padding: "12px 14px 11px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.22)", transform: "rotate(-3deg)", maxWidth: "158px",
+        }}>
+          <div style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic", fontSize: "13px", color: text, lineHeight: 1.3, marginBottom: "9px" }}>
+            Accept these pre-yoga cookies? 🍪
+          </div>
+          <div style={{ display: "flex", gap: "6px" }}>
+            <span style={{ background: text, color: "#fff", fontSize: "9px", fontWeight: 600, padding: "5px 16px", borderRadius: "100px" }}>Yes</span>
+            <span style={{ background: "#ececec", color: text, fontSize: "9px", fontWeight: 600, padding: "5px 16px", borderRadius: "100px" }}>No</span>
+          </div>
         </div>
-        <span style={{ color: text, border: `1px solid ${text}`, padding: "11px 28px", fontSize: "9.5px", fontWeight: 500, letterSpacing: "0.2em", textTransform: "uppercase", borderRadius: "100px" }}>Book a class</span>
       </div>
     </div>
   );
