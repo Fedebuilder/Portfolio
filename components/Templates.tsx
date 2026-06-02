@@ -199,37 +199,50 @@ function TattooArtistTemplate() {
   );
 }
 
-// 5. YOGA STUDIO — verde salvia + foto + card flottante (versione originale)
+// 5. YOGA STUDIO — struttura diversa: foto full-width in alto, contenuto centrato sotto
 function YogaTemplate() {
   const bg = "#f4f1ec", text = "#3a342a", muted = "#7a7263", accent = "#8b6f47";
   return (
     <div style={{ background: bg, borderRadius: "16px", overflow: "hidden", border: "1px solid #d6c9b5", boxShadow: "0 8px 30px rgba(26,26,46,0.08)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       <BrowserBar domain="stillstudio.com.au" textColor="#9c9485" />
-      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "0.5px solid rgba(0,0,0,0.07)" }}>
-        <div>
-          <div style={{ fontFamily: "'Fraunces', serif", fontSize: "15px", fontWeight: 600, color: text, letterSpacing: "-0.01em" }}>Still Studio</div>
-          <div style={{ fontSize: "8px", letterSpacing: "0.18em", color: muted, textTransform: "uppercase", marginTop: "1px" }}>Yoga &amp; meditation · Mosman</div>
-        </div>
+      {/* Navbar minimale centrata */}
+      <div style={{ padding: "14px 28px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
-          <span>Classes</span><span>Teachers</span><span>Pricing</span><span>Contact</span>
-          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600, marginLeft: "4px" }}>Book a class</span>
+          <span>Classes</span><span>Teachers</span>
+        </div>
+        <div style={{ fontFamily: "'Fraunces', serif", fontSize: "17px", fontWeight: 500, color: text, letterSpacing: "0.04em", fontStyle: "italic" }}>still studio</div>
+        <div style={{ display: "flex", gap: "18px", fontSize: "11px", color: muted, alignItems: "center" }}>
+          <span>Pricing</span>
+          <span style={{ background: accent, color: "#fff", padding: "5px 12px", borderRadius: "100px", fontSize: "10px", fontWeight: 600 }}>Book</span>
         </div>
       </div>
-      <div style={{ display: "flex", minHeight: "340px" }}>
-        <div style={{ flex: "1 1 56%", padding: "36px", display: "flex", flexDirection: "column", justifyContent: "center", gap: "14px" }}>
-          <Badge bg="#ebe2d3" color="#6e5836" dot>First class free · Mosman</Badge>
-          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "34px", fontWeight: 600, color: text, letterSpacing: "-0.025em", lineHeight: 1.05, margin: 0 }}>
-            Breathe. Move.<br />
-            <span style={{ fontStyle: "italic", fontWeight: 500, color: accent }}>Return.</span>
+      {/* Foto full-width con titolo in overlay */}
+      <div style={{ position: "relative", height: "200px", margin: "0 20px", borderRadius: "16px", overflow: "hidden", background: `url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=80&auto=format&fit=crop") center 40%/cover` }}>
+        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(58,52,42,0.1), rgba(58,52,42,0.55))" }} />
+        <div style={{ position: "absolute", bottom: "20px", left: 0, right: 0, textAlign: "center" }}>
+          <div style={{ fontSize: "9px", color: "#fff", letterSpacing: "0.32em", textTransform: "uppercase", marginBottom: "8px", opacity: 0.9 }}>Yoga &amp; meditation · Mosman</div>
+          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: "40px", fontWeight: 400, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1, margin: 0 }}>
+            Breathe. Move. <span style={{ fontStyle: "italic" }}>Return.</span>
           </h1>
-          <p style={{ fontSize: "13px", color: muted, lineHeight: 1.6, margin: 0, maxWidth: "330px" }}>
-            Vinyasa, yin and meditation in a quiet, light-filled studio. All levels welcome — drop in any time, or join a course.
-          </p>
-          <CTAs primary="🧘 Book a class" secondary="See timetable →" accent={accent} accentText="#fff" borderColor="#d6c9b5" textColor={text} />
-          <Stats items={[{v:"20+",l:"Classes weekly"},{v:"8",l:"Teachers"},{v:"★ 5.0",l:"Students"}]} textColor={text} subtleColor="#9c9485" displayFont="'Fraunces', serif" borderColor="rgba(0,0,0,0.1)" />
         </div>
-        <div style={{ flex: "0 0 44%", position: "relative", background: `url("https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800&q=80&auto=format&fit=crop") center/cover`, margin: "20px 20px 20px 0", borderRadius: "14px" }}>
-          <FloatingCard label="Next class" value="Today, 6pm yin" displayFont="'Fraunces', serif" />
+      </div>
+      {/* Contenuto sotto, centrato */}
+      <div style={{ padding: "28px 36px 36px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "16px" }}>
+        <p style={{ fontFamily: "'Fraunces', serif", fontSize: "14px", color: muted, lineHeight: 1.7, margin: 0, maxWidth: "440px", fontStyle: "italic" }}>
+          Vinyasa, yin and meditation in a quiet, light-filled studio. All levels welcome — drop in any time, or join a course.
+        </p>
+        <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+          <span style={{ background: text, color: bg, padding: "11px 26px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", borderRadius: "100px" }}>Book a class</span>
+          <span style={{ color: text, padding: "11px 6px", fontSize: "10px", fontWeight: 500, letterSpacing: "0.16em", textTransform: "uppercase", borderBottom: `0.5px solid ${text}` }}>Timetable</span>
+        </div>
+        {/* Riga info orizzontale invece di stats verticali */}
+        <div style={{ display: "flex", gap: "0", marginTop: "10px", borderTop: `0.5px solid ${accent}33`, paddingTop: "18px", width: "100%", maxWidth: "440px", justifyContent: "space-around" }}>
+          {[{v:"20+",l:"Classes weekly"},{v:"8",l:"Teachers"},{v:"First free",l:"New students"}].map(s => (
+            <div key={s.l} style={{ textAlign: "center" }}>
+              <div style={{ fontFamily: "'Fraunces', serif", fontSize: "16px", fontWeight: 500, color: text, fontStyle: "italic" }}>{s.v}</div>
+              <div style={{ fontSize: "8px", color: muted, letterSpacing: "0.08em", textTransform: "uppercase", marginTop: "2px" }}>{s.l}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -295,8 +308,8 @@ const tabs = [
   { name: "Physiotherapist", style: "Classic", comp: <PhysioTemplate /> },
   { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
   { name: "Personal trainer", style: "Bold", comp: <PersonalTrainerTemplate /> },
+  { name: "Yoga studio", style: "Editorial", comp: <YogaTemplate /> },
   { name: "Tattoo artist", style: "Playful", comp: <TattooArtistTemplate /> },
-  { name: "Yoga studio", style: "Warm", comp: <YogaTemplate /> },
 ];
 
 export default function Templates() {
