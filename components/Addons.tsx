@@ -30,12 +30,12 @@ export default function Addons() {
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
-      <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
+      <div className="card-pad" style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
           The base website covers most needs. If you want more, here are the extras I can bolt on — priced individually based on scope.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+        <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
           {addons.map(a => (
             <div key={a.title} style={{
               display: "flex", gap: "14px", alignItems: "flex-start",

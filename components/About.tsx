@@ -20,7 +20,7 @@ const experience = [
 ];
 
 const extras = [
-  "🎵 Hosted Fred Again on my rooftop in Naples — if you don't believe me there's a YouTube video with 2M+ views :')",
+  "🎵 Organised Fred Again on my rooftop in Naples — YouTube video, 2M+ views",
   "🤿 Competitive water polo athlete at national level (2008–2018)",
   "🌏 6 months solo backpacking across Southeast Asia",
 ];
@@ -34,7 +34,7 @@ export default function About() {
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
-      <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
+      <div className="card-pad" style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
 
         {/* Foto + Nome + Tagline */}
         <div style={{ display: "flex", gap: "20px", alignItems: "center", marginBottom: "20px" }}>

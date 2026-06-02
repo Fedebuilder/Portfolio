@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section style={{ padding: "56px 0 48px" }}>
-      <div style={{
+      <div className="hero-wrap" style={{
         display: "flex",
         gap: "44px",
         alignItems: "center",
@@ -18,7 +18,7 @@ export default function Hero() {
             <span style={{ width: "6px", height: "6px", background: "#3b82c4", borderRadius: "50%", display: "inline-block" }} />
             Available for projects · Sydney, AU
           </div>
-          <h1 style={{
+          <h1 className="hero-h1" style={{
             fontFamily: "'Fraunces', serif", fontSize: "46px", fontWeight: 600,
             lineHeight: 1.05, letterSpacing: "-0.025em", color: "#111827", marginBottom: "18px"
           }}>

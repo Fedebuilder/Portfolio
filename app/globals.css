@@ -10,3 +10,19 @@ body {
   color: #1a1a2e;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ============ MOBILE RESPONSIVE ============ */
+@media (max-width: 640px) {
+  /* tighter page + card padding on small screens */
+  .page-container { padding-left: 16px !important; padding-right: 16px !important; }
+  .tpl-card { padding-left: 18px !important; padding-right: 18px !important; }
+  .card-pad { padding-left: 18px !important; padding-right: 18px !important; }
+
+  /* collapse multi-column grids to a single column */
+  .grid-2 { grid-template-columns: 1fr !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+
+  /* hero: stack + smaller headline */
+  .hero-h1 { font-size: 32px !important; }
+  .hero-wrap { gap: 28px !important; }
+}

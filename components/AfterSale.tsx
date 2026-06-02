@@ -25,13 +25,13 @@ export default function AfterSale() {
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
-      <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
+      <div className="card-pad" style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
           A common worry: <em style={{ color: "#111827" }}>what if you disappear and I&apos;m stuck with a site I can&apos;t touch?</em>{" "}
           Fair question. Here&apos;s how I make sure that&apos;s never a problem.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
+        <div className="grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px" }}>
           {items.map(i => (
             <div key={i.title} style={{ background: "#eef1f5", borderRadius: "14px", padding: "20px 22px" }}>
               <div style={{ fontSize: "24px", marginBottom: "10px" }}>{i.icon}</div>

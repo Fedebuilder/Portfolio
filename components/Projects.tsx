@@ -28,7 +28,7 @@ export default function Projects() {
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+      <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
         {projects.map((p) => (
           <a key={p.title} href={p.link} target="_blank" rel="noreferrer" style={{ textDecoration: "none", display: "block" }}>
             <div

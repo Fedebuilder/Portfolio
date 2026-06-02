@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main style={{ background: "#eef1f5", minHeight: "100vh" }}>
       <Navbar />
-      <div style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px" }}>
+      <div className="page-container" style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px" }}>
         <Hero />
         <Projects />
         <Templates />

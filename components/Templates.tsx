@@ -1,5 +1,37 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
+// Scales a fixed-width design down to fit narrow screens (keeps bespoke layouts intact)
+function ScaleToFit({ designWidth = 720, children }: { designWidth?: number; children: React.ReactNode }) {
+  const outerRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [height, setHeight] = useState<number | undefined>(undefined);
+
+  useEffect(() => {
+    const update = () => {
+      const outer = outerRef.current, inner = innerRef.current;
+      if (!outer || !inner) return;
+      const s = Math.min(1, outer.clientWidth / designWidth);
+      const h = inner.offsetHeight * s;
+      setScale(prev => (Math.abs(prev - s) > 0.001 ? s : prev));
+      setHeight(prev => (prev === undefined || Math.abs(prev - h) > 0.5 ? h : prev));
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (outerRef.current) ro.observe(outerRef.current);
+    if (innerRef.current) ro.observe(innerRef.current);
+    return () => ro.disconnect();
+  });
+
+  return (
+    <div ref={outerRef} style={{ width: "100%", height }}>
+      <div ref={innerRef} style={{ width: designWidth, transform: `scale(${scale})`, transformOrigin: "top left" }}>
+        {children}
+      </div>
+    </div>
+  );
+}
 
 const included = [
   "Mobile-first responsive design",
@@ -324,7 +356,7 @@ export default function Templates() {
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
-      <div style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
+      <div className="tpl-card" style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
           Five totally different design directions to show what&apos;s possible — your site can lean classic, bold, minimal, brutalist, whatever fits your brand. Pick a vibe and we&apos;ll shape it around you.
         </p>
@@ -348,13 +380,15 @@ export default function Templates() {
           ))}
         </div>
 
-        <div style={{ marginBottom: "20px" }}>{tabs[idx].comp}</div>
+        <div style={{ marginBottom: "20px" }}>
+          <ScaleToFit designWidth={720}>{tabs[idx].comp}</ScaleToFit>
+        </div>
 
         <div style={{ background: "#eef1f5", borderRadius: "14px", padding: "18px 22px" }}>
           <p style={{ fontSize: "12px", fontWeight: 700, color: "#2563ab", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
             What&apos;s included in the base build
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 18px" }}>
+          <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 18px" }}>
             {included.map(i => (
               <div key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
                 <span style={{ color: "#3b82c4", fontSize: "12px", flexShrink: 0, marginTop: "2px" }}>✓</span>
