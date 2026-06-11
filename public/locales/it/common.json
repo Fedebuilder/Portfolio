@@ -1,0 +1,171 @@
+{
+  "nav": {
+    "projects": "Progetti",
+    "templates": "Template",
+    "process": "Come lavoro",
+    "about": "Chi sono",
+    "contact": "Scrivimi"
+  },
+
+  "hero": {
+    "tag": "Sviluppatore web · Sydney",
+    "title_1": "Siti web che",
+    "title_2": "funzionano",
+    "title_3": "davvero.",
+    "subtitle": "Realizzo siti per professionisti e piccole imprese — pagamento unico, nessun canone mensile. Ho un background nel marketing (Lindt, Amazon, L'Oréal), quindi non mi fermo all'estetica: penso a come il sito porta clienti.",
+    "cta_primary": "Guarda i progetti",
+    "cta_secondary": "Contattami",
+    "photo_caption": "I developer possono sembrare un po' particolari — ma giuro che non lo sono 🐶"
+  },
+
+  "projects": {
+    "title": "Progetti",
+    "subtitle": "Non mockup. Siti live, clienti veri.",
+    "camilla_title": "Camilla Galli — Osteopata",
+    "camilla_desc": "Sito vetrina per un'osteopata a Milano. Obiettivo: portare prenotazioni via WhatsApp. Consegnato in 5 giorni.",
+    "camilla_tag": "Sito vetrina",
+    "betterpdp_title": "BetterPDP — SaaS B2B",
+    "betterpdp_desc": "App che analizza le schede prodotto per la visibilità sui motori AI (ChatGPT, Perplexity, Claude). Costruita da solo: auth, Stripe, analisi AI, interfaccia EN/IT.",
+    "betterpdp_tag": "Prodotto SaaS",
+    "visit": "Apri il sito →"
+  },
+
+  "templates": {
+    "title": "Come potrebbe essere il tuo",
+    "subtitle": "Cinque direzioni stilistiche diverse per mostrare cosa si può fare — il tuo sito può essere classico, essenziale, editoriale, brutale o giocoso. Partiamo dal tuo gusto e costruiamo intorno a quello.",
+    "tabs": {
+      "physio": "Classico",
+      "cafe": "Brutalist",
+      "trainer": "Bold",
+      "yoga": "Editoriale",
+      "tattoo": "Giocoso"
+    },
+    "included_title": "Cosa include ogni sito base",
+    "included": [
+      "Design responsive (mobile + desktop)",
+      "Setup dominio personalizzato",
+      "Caricamento veloce (Core Web Vitals)",
+      "Form di contatto o CTA WhatsApp",
+      "Google Analytics collegato",
+      "Consegna su Vercel + repository GitHub"
+    ]
+  },
+
+  "process": {
+    "title": "Come lavoro",
+    "subtitle": "Semplice e senza sorprese.",
+    "steps": [
+      {
+        "title": "Chiamata conoscitiva gratuita",
+        "desc": "15 minuti. Mi racconti cosa fai e cosa ti serve, io ti dico cosa posso fare. Nessun impegno."
+      },
+      {
+        "title": "Proposta scritta",
+        "desc": "Entro 48 ore ricevi scope, prezzo e tempi in un documento chiaro. Una pagina, senza tecnicismi."
+      },
+      {
+        "title": "50% all'inizio, 50% alla consegna",
+        "desc": "Pago standard nel freelance. Parto dopo il primo acconto, il saldo solo quando sei soddisfatto."
+      },
+      {
+        "title": "Costruisco e ti aggiorno",
+        "desc": "Prima versione in circa una settimana. Hai 2 round di revisioni inclusi — la maggior parte dei clienti ne usa uno."
+      },
+      {
+        "title": "Lancio e consegna",
+        "desc": "Il sito va live sul tuo dominio. Ti consegno il codice su GitHub e una guida per aggiornare i testi da solo."
+      }
+    ]
+  },
+
+  "aftersale": {
+    "title": "Dopo il lancio",
+    "boxes": [
+      {
+        "title": "30 giorni di correzioni gratuite",
+        "desc": "Se nei primi 30 giorni si rompe qualcosa per colpa mia, lo sistemo senza costi aggiuntivi. La maggior parte dei problemi viene fuori subito."
+      },
+      {
+        "title": "Il codice è tuo",
+        "desc": "Repository GitHub trasferito al tuo account. Se smetti di lavorare con me, qualsiasi altro sviluppatore può riprendere da dove mi sono fermato."
+      },
+      {
+        "title": "Hai bisogno di modifiche?",
+        "desc": "Dopo il primo mese basta mandarmi un messaggio. Le piccole cose le faccio a prezzi onesti, le revisioni più grandi le quoto in anticipo. Nessun abbonamento."
+      }
+    ]
+  },
+
+  "addons": {
+    "title": "Servizi aggiuntivi",
+    "subtitle": "Il sito base copre la maggior parte delle esigenze. Se vuoi qualcosa in più lo quotiamo separatamente.",
+    "items": [
+      { "title": "Calendario prenotazioni", "desc": "Integrazione Calendly o simile — i tuoi clienti prenotano direttamente dal sito senza chiamare." },
+      { "title": "Profilo Google Business", "desc": "Setup e ottimizzazione su Google Maps e Ricerca. Include anche il flusso per raccogliere recensioni." },
+      { "title": "SEO locale", "desc": "Meta tag, sitemap, Google Search Console, parole chiave per la tua zona. Costruito per farsi trovare." },
+      { "title": "Pagamenti online", "desc": "Accetta anticipi, pacchetti o gift card direttamente dal sito. I soldi arrivano sul tuo conto." }
+    ]
+  },
+
+  "faq": {
+    "title": "Domande frequenti",
+    "items": [
+      {
+        "q": "Quanto tempo ci vuole?",
+        "a": "Un sito vetrina standard è online in 1-2 settimane dall'inizio del progetto, revisioni incluse. I servizi aggiuntivi (prenotazioni, SEO, Stripe) aggiungono qualche giorno ciascuno."
+      },
+      {
+        "q": "Posso modificare il sito da solo in futuro?",
+        "a": "Sì. Ti consegno il codice su GitHub e una guida pratica. Se preferisci non toccare nulla, posso fare le modifiche io a una tariffa oraria."
+      },
+      {
+        "q": "Ci sono costi ricorrenti?",
+        "a": "No. Paghi una volta per il sito. L'unica spesa ricorrente è il dominio (circa 15-20€ l'anno, probabilmente ce l'hai già). L'hosting su Vercel è gratuito per siti come il tuo."
+      },
+      {
+        "q": "E se non ho foto o testi?",
+        "a": "Nessun problema, quasi tutti i clienti sono in questa situazione. Posso aiutarti a scrivere i testi sulla base della nostra chiamata, e trovare foto stock di qualità gratuite. Per le foto professionali ti indico fotografi di fiducia."
+      },
+      {
+        "q": "Cosa succede se il sito ha problemi dopo la consegna?",
+        "a": "Nei primi 30 giorni sistemo qualsiasi bug gratuitamente. Dopo, le correzioni sono veloci e a prezzi ragionevoli — nessun abbonamento obbligatorio."
+      },
+      {
+        "q": "Ti occupi anche di social media o pubblicità?",
+        "a": "Non è incluso nel servizio — mi concentro sul sito. Detto questo, con il mio background nel marketing posso darti una consulenza strategica gratuita di 30 minuti su cosa muoverebbe davvero l'ago per la tua attività."
+      },
+      {
+        "q": "Perché costi meno di un'agenzia?",
+        "a": "Nessun ufficio, nessun team, nessun overhead. Lavoro in proprio nel tempo libero — il che mi permette di prezzare il lavoro per quello che vale, senza dover coprire le spese fisse di uno studio."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "Chi sono",
+    "tag": "Developer con la testa da marketer",
+    "bio": "Sono Federico. Di giorno lavoro nel marketing internazionale per Lindt & Sprüngli — sono stato selezionato tra oltre 1.000 candidati per un programma di rotazione tra Svizzera, Italia e Australia. Nel tempo libero costruisco siti e prodotti digitali.",
+    "bio_2": "Il marketing mi ha insegnato che un sito bello che non converte non serve a niente. Ogni progetto parte da questa domanda: cosa deve fare questo sito per te?",
+    "experience_title": "Esperienze",
+    "education_title": "Formazione",
+    "education": "Double MSc in Management e International Business — Bocconi + HEC Montréal. Premio di eccellenza accademica (1 dei 4 migliori studenti MSc dell'ateneo).",
+    "fun_title": "Cose di cui parlo volentieri",
+    "fun_items": [
+      "🎵 Ho organizzato Fred Again su un rooftop a Napoli — il video è finito su YouTube con oltre 2 milioni di visualizzazioni",
+      "🤿 Ho giocato a pallanuoto a livello agonistico nazionale per dieci anni",
+      "🌏 Sei mesi in giro da solo nel Sud-Est Asiatico"
+    ]
+  },
+
+  "contact": {
+    "title": "Hai un progetto in mente?",
+    "subtitle": "Una chiamata di 15 minuti è sufficiente per capire se posso aiutarti.",
+    "whatsapp": "Scrivimi su WhatsApp",
+    "email": "Manda una mail",
+    "or": "oppure"
+  },
+
+  "footer": {
+    "easter_egg": "Fatto da Federico, con il supporto morale di Bubu l'avocado."
+  }
+}

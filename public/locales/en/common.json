@@ -1,0 +1,171 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "templates": "Templates",
+    "process": "Process",
+    "about": "About",
+    "contact": "Let's talk"
+  },
+
+  "hero": {
+    "tag": "Web Developer & Marketing Strategist",
+    "title_1": "Websites that",
+    "title_2": "actually",
+    "title_3": "work.",
+    "subtitle": "I build fast, modern websites for Sydney businesses — from $700, one-off payment, no monthly fees. I come from marketing (Lindt, Amazon, L'Oréal), so I think about conversion, not just code.",
+    "cta_primary": "See my work",
+    "cta_secondary": "Get in touch",
+    "photo_caption": "I know developers can feel intimidating to talk to — promise I'm not 🐶"
+  },
+
+  "projects": {
+    "title": "Real projects",
+    "subtitle": "Not mockups. These are live sites built for real clients.",
+    "camilla_title": "Camilla Galli — Osteopath",
+    "camilla_desc": "Single-page showcase site for an osteopath in Milan. SEO-optimised, drives WhatsApp bookings. Built in Next.js + Tailwind.",
+    "camilla_tag": "Showcase site",
+    "betterpdp_title": "BetterPDP — B2B SaaS",
+    "betterpdp_desc": "Full web app that scores e-commerce product pages for AI search visibility (ChatGPT, Perplexity, Claude). Credit system, Stripe payments, EN/IT.",
+    "betterpdp_tag": "SaaS product",
+    "visit": "Visit site →"
+  },
+
+  "templates": {
+    "title": "Any style. Any industry.",
+    "subtitle": "These are coded mini-mockups — not static images. Each one shows a different personality I can build for you.",
+    "tabs": {
+      "physio": "Classic",
+      "cafe": "Brutalist",
+      "trainer": "Bold",
+      "yoga": "Editorial",
+      "tattoo": "Playful"
+    },
+    "included_title": "What's included in every base build",
+    "included": [
+      "Responsive design (mobile + desktop)",
+      "Custom domain setup",
+      "Fast load times (Core Web Vitals optimised)",
+      "Contact form or WhatsApp CTA",
+      "Google Analytics connected",
+      "Delivered via Vercel + GitHub repo"
+    ]
+  },
+
+  "process": {
+    "title": "How it works",
+    "subtitle": "Simple, clear, no surprises.",
+    "steps": [
+      {
+        "title": "Free intro call",
+        "desc": "15 minutes. You tell me what you need, I tell you what's possible. No commitment."
+      },
+      {
+        "title": "Written proposal",
+        "desc": "You receive a clear scope, price, and timeline within 48 hours."
+      },
+      {
+        "title": "50% upfront",
+        "desc": "We start once the first payment is confirmed. Keeps us both accountable."
+      },
+      {
+        "title": "I build it",
+        "desc": "Showcase sites take 1–2 weeks. You get updates along the way."
+      },
+      {
+        "title": "Launch & handover",
+        "desc": "Live Vercel link, GitHub repo access, and a plain-English guide to update your own content."
+      }
+    ]
+  },
+
+  "aftersale": {
+    "title": "After we launch",
+    "boxes": [
+      {
+        "title": "30 days free bug fixes",
+        "desc": "If something breaks after launch that's my fault, I fix it for free. No questions asked."
+      },
+      {
+        "title": "You own the code",
+        "desc": "Full GitHub access. It's yours. Take it anywhere, give it to another developer, do what you want."
+      },
+      {
+        "title": "Need changes later?",
+        "desc": "Just ask. I'm happy to quote for updates, new pages, or features down the line."
+      }
+    ]
+  },
+
+  "addons": {
+    "title": "Optional add-ons",
+    "subtitle": "Priced individually based on scope — ask me for a quote.",
+    "items": [
+      { "title": "Booking calendar", "desc": "Integrated online booking so clients can schedule directly from your site." },
+      { "title": "Google Business", "desc": "Setup + optimisation of your Google Business profile for local search." },
+      { "title": "SEO setup", "desc": "Technical SEO, meta tags, sitemap, structured data — built for discovery." },
+      { "title": "Stripe payments", "desc": "Take deposits or full payments online, directly from your site." }
+    ]
+  },
+
+  "faq": {
+    "title": "Questions I get asked",
+    "items": [
+      {
+        "q": "How long does a site take?",
+        "a": "A single-page showcase site takes 1–2 weeks from deposit to launch. Multi-page sites take 2–4 weeks depending on complexity."
+      },
+      {
+        "q": "Can I update the content myself?",
+        "a": "Yes. I'll hand over the GitHub repo and a plain-English guide. If you'd rather not touch code, I can make changes for a small hourly fee."
+      },
+      {
+        "q": "Are there monthly fees?",
+        "a": "No. You pay once and that's it. The only ongoing cost is your domain (~$20/year). Hosting on Vercel is free for sites like yours."
+      },
+      {
+        "q": "Do you provide photos or copy?",
+        "a": "I don't do photography or copywriting — you'll need to supply those. I can advise on what works best and recommend free stock photo sites."
+      },
+      {
+        "q": "How long is the bug support?",
+        "a": "30 days from launch. If something breaks that I caused, I fix it free. After 30 days, changes are quoted at my hourly rate."
+      },
+      {
+        "q": "Can you run my ads or social media too?",
+        "a": "Not as part of this service — I focus on the website. But I'm happy to talk strategy and point you in the right direction."
+      },
+      {
+        "q": "Why are you cheaper than an agency?",
+        "a": "I do this on the side to fund travel. No office, no account managers, no overhead. You get agency-level work at a fraction of the price."
+      }
+    ]
+  },
+
+  "about": {
+    "title": "About me",
+    "tag": "Developer with a marketing brain",
+    "bio": "I'm Federico — a full-stack developer based in Sydney. I currently work at Lindt & Sprüngli in international marketing, which is how I think about websites differently from most developers: not just \"does it look good\" but \"does it convert.\"",
+    "bio_2": "I build sites on the side to fund travel. Which means you get someone who cares, charges fairly, and moves fast.",
+    "experience_title": "Where I've worked",
+    "education_title": "Education",
+    "education": "Double MSc in Management & International Business — Bocconi University + HEC Montréal. Academic excellence award (1 of 4 best MSc students university-wide).",
+    "fun_title": "Stuff I actually talk about at dinner",
+    "fun_items": [
+      "Organised Fred Again on a rooftop in Naples — ended up on YouTube with 2M+ views",
+      "Played competitive water polo at national level for 10 years",
+      "6 months solo backpacking across Southeast Asia"
+    ]
+  },
+
+  "contact": {
+    "title": "Let's build something.",
+    "subtitle": "Got a project in mind? A quick WhatsApp message or email is all it takes to get started.",
+    "whatsapp": "Message on WhatsApp",
+    "email": "Send an email",
+    "or": "or"
+  },
+
+  "footer": {
+    "easter_egg": "Built by Federico, with moral support from Bubu the avocado."
+  }
+}

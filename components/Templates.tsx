@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 // Scales a fixed-width design down to fit narrow screens (keeps bespoke layouts intact)
 function ScaleToFit({ designWidth = 720, children }: { designWidth?: number; children: React.ReactNode }) {
@@ -33,14 +34,7 @@ function ScaleToFit({ designWidth = 720, children }: { designWidth?: number; chi
   );
 }
 
-const included = [
-  "Mobile-first responsive design",
-  "WhatsApp direct contact integration",
-  "SEO basics (meta tags, sitemap)",
-  "Contact form with email forwarding",
-  "Google Business setup hooks",
-  "Fast hosting on Vercel (free)",
-];
+// included array is now read from i18n translations
 
 // =============== INDIVIDUAL TEMPLATE COMPONENTS ===============
 
@@ -349,32 +343,37 @@ function FloatingCard({ label, value, displayFont, bold }: { label: string; valu
 
 // =============== MAIN COMPONENT ===============
 
-const tabs = [
-  { name: "Physiotherapist", style: "Classic", comp: <PhysioTemplate /> },
-  { name: "Café", style: "Brutalist", comp: <CafeTemplate /> },
-  { name: "Personal trainer", style: "Bold", comp: <PersonalTrainerTemplate /> },
-  { name: "Yoga studio", style: "Editorial", comp: <YogaTemplate /> },
-  { name: "Tattoo artist", style: "Playful", comp: <TattooArtistTemplate /> },
-];
+
 
 export default function Templates() {
   const [idx, setIdx] = useState(0);
+  const { t } = useTranslation("common");
+  const included = t("templates.included", { returnObjects: true }) as string[];
+
+  const tabNames = [
+    { name: "Physiotherapist", style: t("templates.tabs.physio"), comp: <PhysioTemplate /> },
+    { name: "Café", style: t("templates.tabs.cafe"), comp: <CafeTemplate /> },
+    { name: "Personal trainer", style: t("templates.tabs.trainer"), comp: <PersonalTrainerTemplate /> },
+    { name: "Yoga studio", style: t("templates.tabs.yoga"), comp: <YogaTemplate /> },
+    { name: "Tattoo artist", style: t("templates.tabs.tattoo"), comp: <TattooArtistTemplate /> },
+  ];
+
   return (
     <section style={{ paddingBottom: "40px" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "28px" }}>
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
-        <span style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#3b82c4", whiteSpace: "nowrap" }}>What yours could look like</span>
+        <span style={{ fontSize: "12px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.14em", color: "#3b82c4", whiteSpace: "nowrap" }}>{t("templates.title")}</span>
         <div style={{ flex: 1, height: "1.5px", background: "#c8d3e0" }} />
       </div>
 
       <div className="tpl-card" style={{ background: "#fff", border: "1px solid #c8d3e0", borderRadius: "20px", padding: "28px 32px", boxShadow: "0 2px 16px rgba(26,26,46,0.07)" }}>
         <p style={{ fontSize: "14px", color: "#5a6475", lineHeight: 1.7, marginBottom: "22px", maxWidth: "560px" }}>
-          Five totally different design directions to show what&apos;s possible — your site can lean classic, bold, minimal, brutalist, whatever fits your brand. Pick a vibe and we&apos;ll shape it around you.
+          {t("templates.subtitle")}
         </p>
 
         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "18px" }}>
-          {tabs.map((t, i) => (
-            <button key={t.name} onClick={() => setIdx(i)} style={{
+          {tabNames.map((tab, i) => (
+            <button key={tab.name} onClick={() => setIdx(i)} style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: "12px", fontWeight: 600,
               padding: "6px 14px", borderRadius: "100px",
@@ -385,25 +384,25 @@ export default function Templates() {
               transition: "all 0.15s",
               display: "inline-flex", alignItems: "center", gap: "8px",
             }}>
-              <span>{t.name}</span>
-              <span style={{ fontSize: "9px", opacity: 0.6, fontWeight: 500 }}>{t.style}</span>
+              <span>{tab.name}</span>
+              <span style={{ fontSize: "9px", opacity: 0.6, fontWeight: 500 }}>{tab.style}</span>
             </button>
           ))}
         </div>
 
         <div style={{ marginBottom: "20px" }}>
-          <ScaleToFit designWidth={720}>{tabs[idx].comp}</ScaleToFit>
+          <ScaleToFit designWidth={720}>{tabNames[idx].comp}</ScaleToFit>
         </div>
 
         <div style={{ background: "#eef1f5", borderRadius: "14px", padding: "18px 22px" }}>
           <p style={{ fontSize: "12px", fontWeight: 700, color: "#2563ab", marginBottom: "10px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-            What&apos;s included in the base build
+            {t("templates.included_title")}
           </p>
           <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px 18px" }}>
-            {included.map(i => (
+            {included.map((item, i) => (
               <div key={i} style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
                 <span style={{ color: "#3b82c4", fontSize: "12px", flexShrink: 0, marginTop: "2px" }}>✓</span>
-                <span style={{ fontSize: "12.5px", color: "#374151", lineHeight: 1.5 }}>{i}</span>
+                <span style={{ fontSize: "12.5px", color: "#374151", lineHeight: 1.5 }}>{item}</span>
               </div>
             ))}
           </div>
