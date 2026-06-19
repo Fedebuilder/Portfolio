@@ -18,7 +18,7 @@ const projects = [
     desc_key: 'projects.betterpdp_desc',
     stack: ['React 18', 'Flask', 'Supabase', 'Stripe', 'Railway'],
     link: 'https://betterpdp.com',
-    screenshot: 'https://api.microlink.io/?url=https://betterpdp.com&screenshot=true&meta=false&embed=screenshot.url',
+    screenshot: 'https://api.microlink.io/?url=https://betterpdp.com&screenshot=true&meta=false&embed=screenshot.url&force=true',
   },
 ];
 
