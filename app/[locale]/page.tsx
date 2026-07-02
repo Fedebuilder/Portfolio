@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Shift from "@/components/Shift";
 import Projects from "@/components/Projects";
-import Templates from "@/components/Templates";
 import Process from "@/components/Process";
 import AfterSale from "@/components/AfterSale";
 import Addons from "@/components/Addons";
@@ -15,8 +15,8 @@ export default function Home() {
       <Navbar />
       <div className="page-container" style={{ maxWidth: "900px", margin: "0 auto", padding: "0 32px" }}>
         <Hero />
+        <Shift />
         <Projects />
-        <Templates />
         <Process />
         <AfterSale />
         <Addons />

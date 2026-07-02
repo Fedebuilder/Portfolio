@@ -1,54 +1,53 @@
 {
   "nav": {
     "projects": "Projects",
-    "templates": "Templates",
     "process": "Process",
     "about": "About",
     "contact": "Let's talk"
   },
 
   "hero": {
-    "tag": "Web Developer & Marketing Strategist",
-    "title_1": "Websites that",
-    "title_2": "actually",
-    "title_3": "work.",
-    "subtitle": "I build fast, modern websites for Sydney businesses — from $700, one-off payment, no monthly fees. I come from marketing (Lindt, Amazon, L'Oréal), so I think about conversion, not just code.",
+    "tag": "Web Developer · AI Search Visibility",
+    "title_1": "Your next patient",
+    "title_2": "asks an AI",
+    "title_3": "for advice.",
+    "subtitle": "I build sites and shape your AI visibility so that when they do, your name comes up — with the right information. One-off payment, no monthly fees.",
     "cta_primary": "See my work",
     "cta_secondary": "Get in touch",
     "photo_caption": "I know developers can feel intimidating to talk to — promise I'm not 🐶"
+  },
+
+  "shift": {
+    "tag": "Why this matters now",
+    "title": "People ask ChatGPT before they ask Google.",
+    "subtitle": "That changes what \"being found online\" actually means. Three things I see over and over when I check how professionals show up to AI:",
+    "points": [
+      {
+        "title": "Invisible",
+        "desc": "Not mentioned at all — older or more-reviewed profiles win by default, regardless of who's actually better."
+      },
+      {
+        "title": "Misrepresented",
+        "desc": "Mentioned, but with wrong details — an old address, a past employer, a qualification that's no longer current."
+      },
+      {
+        "title": "Fragmented",
+        "desc": "The website alone isn't enough. What matters is whether it agrees with Google Business, LinkedIn, and the directories AI actually trusts."
+      }
+    ],
+    "closing": "That's the gap I close: making you findable, and correctly described, when it counts."
   },
 
   "projects": {
     "title": "Real projects",
     "subtitle": "Not mockups. These are live sites built for real clients.",
     "camilla_title": "Camilla Galli — Osteopath",
-    "camilla_desc": "Single-page showcase site for an osteopath in Milan. SEO-optimised, drives WhatsApp bookings. Built in Next.js + Tailwind.",
+    "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. Current case study for the AI-visibility work above.",
     "camilla_tag": "Showcase site",
     "betterpdp_title": "BetterPDP — B2B SaaS",
-    "betterpdp_desc": "Full web app that scores e-commerce product pages for AI search visibility (ChatGPT, Perplexity, Claude). Credit system, Stripe payments, EN/IT.",
-    "betterpdp_tag": "SaaS product",
+    "betterpdp_desc": "The tool behind this whole approach: it scores web pages for how well AI search engines (ChatGPT, Perplexity, Claude) find and interpret them. Built solo, now applied to individual professionals.",
+    "betterpdp_tag": "The engine",
     "visit": "Visit site →"
-  },
-
-  "templates": {
-    "title": "Any style. Any industry.",
-    "subtitle": "These are coded mini-mockups — not static images. Each one shows a different personality I can build for you.",
-    "tabs": {
-      "physio": "Classic",
-      "cafe": "Brutalist",
-      "trainer": "Bold",
-      "yoga": "Editorial",
-      "tattoo": "Playful"
-    },
-    "included_title": "What's included in every base build",
-    "included": [
-      "Responsive design (mobile + desktop)",
-      "Custom domain setup",
-      "Fast load times (Core Web Vitals optimised)",
-      "Contact form or WhatsApp CTA",
-      "Google Analytics connected",
-      "Delivered via Vercel + GitHub repo"
-    ]
   },
 
   "process": {
@@ -57,7 +56,7 @@
     "steps": [
       {
         "title": "Free intro call",
-        "desc": "15 minutes. You tell me what you need, I tell you what's possible. No commitment."
+        "desc": "15 minutes. We look at what AI currently says about you (if anything), and what you actually need."
       },
       {
         "title": "Written proposal",
@@ -97,13 +96,13 @@
   },
 
   "addons": {
-    "title": "Optional add-ons",
-    "subtitle": "Priced individually based on scope — ask me for a quote.",
+    "title": "AI visibility add-ons",
+    "subtitle": "The website is the foundation. These make you legible to the systems patients actually ask.",
     "items": [
-      { "title": "Booking calendar", "desc": "Integrated online booking so clients can schedule directly from your site." },
-      { "title": "Google Business", "desc": "Setup + optimisation of your Google Business profile for local search." },
-      { "title": "SEO setup", "desc": "Technical SEO, meta tags, sitemap, structured data — built for discovery." },
-      { "title": "Stripe payments", "desc": "Take deposits or full payments online, directly from your site." }
+      { "title": "AI visibility audit", "desc": "I check what AI currently says about you, and trace exactly where the gaps come from." },
+      { "title": "Local entity setup", "desc": "Google Business Profile and directory listings aligned to one consistent, correct identity." },
+      { "title": "Structured data", "desc": "Schema markup that tells search and AI engines exactly who you are, what you treat, and where." },
+      { "title": "Ongoing monitoring", "desc": "Periodic re-check of how AI describes you, with fixes applied when something drifts." }
     ]
   },
 
@@ -120,7 +119,7 @@
       },
       {
         "q": "Are there monthly fees?",
-        "a": "No. You pay once and that's it. The only ongoing cost is your domain (~$20/year). Hosting on Vercel is free for sites like yours."
+        "a": "No. You pay once and that's it. The only ongoing cost is your domain (~$20/year). Hosting on Vercel is free for sites like yours. AI visibility monitoring is the one optional recurring service, and it's entirely your call."
       },
       {
         "q": "Do you provide photos or copy?",
@@ -131,8 +130,8 @@
         "a": "30 days from launch. If something breaks that I caused, I fix it free. After 30 days, changes are quoted at my hourly rate."
       },
       {
-        "q": "Can you run my ads or social media too?",
-        "a": "Not as part of this service — I focus on the website. But I'm happy to talk strategy and point you in the right direction."
+        "q": "Can you guarantee AI will recommend me?",
+        "a": "No, and anyone who promises that is overselling. What I can do is build the foundation that makes you eligible and correctly represented — the rest depends on reviews, competition, and factors outside anyone's full control."
       },
       {
         "q": "Why are you cheaper than an agency?",
@@ -145,7 +144,7 @@
     "title": "About me",
     "tag": "Developer with a marketing brain",
     "bio": "I'm Federico — a full-stack developer based in Sydney. I currently work at Lindt & Sprüngli in international marketing, which is how I think about websites differently from most developers: not just \"does it look good\" but \"does it convert.\"",
-    "bio_2": "I build sites on the side to fund travel. Which means you get someone who cares, charges fairly, and moves fast.",
+    "bio_2": "These days \"converting\" also means being found and correctly understood by AI, not just by Google. I build the tooling myself, so I can prove it works before I sell it.",
     "experience_title": "Where I've worked",
     "education_title": "Education",
     "education": "Double MSc in Management & International Business — Bocconi University + HEC Montréal. Academic excellence award (1 of 4 best MSc students university-wide).",

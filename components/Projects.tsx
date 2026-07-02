@@ -3,15 +3,6 @@ import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
-    key: 'camilla',
-    type_key: 'projects.camilla_tag',
-    title_key: 'projects.camilla_title',
-    desc_key: 'projects.camilla_desc',
-    stack: ['Next.js 16', 'Tailwind CSS', 'TypeScript', 'Vercel'],
-    link: 'https://www.camillagalli.com',
-    screenshot: 'https://api.microlink.io/?url=https://www.camillagalli.com&screenshot=true&meta=false&embed=screenshot.url',
-  },
-  {
     key: 'betterpdp',
     type_key: 'projects.betterpdp_tag',
     title_key: 'projects.betterpdp_title',
@@ -19,6 +10,15 @@ const projects = [
     stack: ['React 18', 'Flask', 'Supabase', 'Stripe', 'Railway'],
     link: 'https://betterpdp.com',
     screenshot: 'https://api.microlink.io/?url=https://betterpdp.com&screenshot=true&meta=false&embed=screenshot.url&force=true',
+  },
+  {
+    key: 'camilla',
+    type_key: 'projects.camilla_tag',
+    title_key: 'projects.camilla_title',
+    desc_key: 'projects.camilla_desc',
+    stack: ['Next.js 16', 'Tailwind CSS', 'TypeScript', 'Vercel'],
+    link: 'https://www.camillagalli.com',
+    screenshot: 'https://api.microlink.io/?url=https://www.camillagalli.com&screenshot=true&meta=false&embed=screenshot.url',
   },
 ];
 

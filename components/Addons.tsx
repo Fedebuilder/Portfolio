@@ -1,7 +1,7 @@
 'use client';
 import { useTranslation } from 'react-i18next';
 
-const icons = ['📅', '🗺️', '🔍', '💳'];
+const icons = ['🔍', '🗺️', '🏷️', '📡'];
 
 export default function Addons() {
   const { t } = useTranslation('common');

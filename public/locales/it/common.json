@@ -1,54 +1,53 @@
 {
   "nav": {
     "projects": "Progetti",
-    "templates": "Template",
     "process": "Come lavoro",
     "about": "Chi sono",
     "contact": "Scrivimi"
   },
 
   "hero": {
-    "tag": "Sviluppatore web · Sydney",
-    "title_1": "Siti web che",
-    "title_2": "funzionano",
-    "title_3": "davvero.",
-    "subtitle": "Realizzo siti per professionisti e piccole imprese — pagamento unico, nessun canone mensile. Ho un background nel marketing (Lindt, Amazon, L'Oréal), quindi non mi fermo all'estetica: penso a come il sito porta clienti.",
+    "tag": "Sviluppo Web · Visibilità AI",
+    "title_1": "Il tuo prossimo paziente",
+    "title_2": "chiede consiglio",
+    "title_3": "a un'AI.",
+    "subtitle": "Costruisco siti e lavoro sulla tua visibilità AI perché, quando succede, il tuo nome esca — con le informazioni giuste. Pagamento unico, nessun canone mensile.",
     "cta_primary": "Guarda i progetti",
     "cta_secondary": "Contattami",
     "photo_caption": "I developer possono sembrare un po' particolari — ma giuro che non lo sono 🐶"
+  },
+
+  "shift": {
+    "tag": "Perché conta adesso",
+    "title": "Prima di cercare su Google, molti chiedono a ChatGPT.",
+    "subtitle": "Questo cambia cosa vuol dire davvero \"farsi trovare online\". Tre cose che vedo ripetersi ogni volta che controllo come un professionista risulta all'AI:",
+    "points": [
+      {
+        "title": "Invisibile",
+        "desc": "Non viene nominato affatto — vince chi ha un profilo più vecchio o più recensito, non chi è più bravo."
+      },
+      {
+        "title": "Rappresentato male",
+        "desc": "Viene nominato, ma con dati sbagliati: un indirizzo vecchio, un datore di lavoro passato, una qualifica non più attuale."
+      },
+      {
+        "title": "Frammentato",
+        "desc": "Il sito da solo non basta. Conta se è coerente con Google Business, LinkedIn e le directory di settore su cui l'AI si basa davvero."
+      }
+    ],
+    "closing": "È questo lo scarto che chiudo: renderti trovabile, e raccontato bene, quando conta."
   },
 
   "projects": {
     "title": "Progetti",
     "subtitle": "Non mockup. Siti live, clienti veri.",
     "camilla_title": "Camilla Galli — Osteopata",
-    "camilla_desc": "Sito vetrina per un'osteopata a Milano. Obiettivo: portare prenotazioni via WhatsApp. Consegnato in 5 giorni.",
+    "camilla_desc": "Sito vetrina per un'osteopata a Milano, costruito per la ricerca fin dal primo giorno. Case study in corso per il lavoro di visibilità AI descritto sopra.",
     "camilla_tag": "Sito vetrina",
     "betterpdp_title": "BetterPDP — SaaS B2B",
-    "betterpdp_desc": "App che analizza le schede prodotto per la visibilità sui motori AI (ChatGPT, Perplexity, Claude). Costruita da solo: auth, Stripe, analisi AI, interfaccia EN/IT.",
-    "betterpdp_tag": "Prodotto SaaS",
+    "betterpdp_desc": "Lo strumento dietro questo intero approccio: misura quanto una pagina web viene trovata e interpretata correttamente dai motori AI (ChatGPT, Perplexity, Claude). Costruito da solo, ora applicato ai singoli professionisti.",
+    "betterpdp_tag": "Il motore",
     "visit": "Apri il sito →"
-  },
-
-  "templates": {
-    "title": "Come potrebbe essere il tuo",
-    "subtitle": "Cinque direzioni stilistiche diverse per mostrare cosa si può fare — il tuo sito può essere classico, essenziale, editoriale, brutale o giocoso. Partiamo dal tuo gusto e costruiamo intorno a quello.",
-    "tabs": {
-      "physio": "Classico",
-      "cafe": "Brutalist",
-      "trainer": "Bold",
-      "yoga": "Editoriale",
-      "tattoo": "Giocoso"
-    },
-    "included_title": "Cosa include ogni sito base",
-    "included": [
-      "Design responsive (mobile + desktop)",
-      "Setup dominio personalizzato",
-      "Caricamento veloce (Core Web Vitals)",
-      "Form di contatto o CTA WhatsApp",
-      "Google Analytics collegato",
-      "Consegna su Vercel + repository GitHub"
-    ]
   },
 
   "process": {
@@ -57,7 +56,7 @@
     "steps": [
       {
         "title": "Chiamata conoscitiva gratuita",
-        "desc": "15 minuti. Mi racconti cosa fai e cosa ti serve, io ti dico cosa posso fare. Nessun impegno."
+        "desc": "15 minuti. Guardiamo insieme cosa risponde oggi l'AI sul tuo nome (se risponde qualcosa) e cosa ti serve davvero."
       },
       {
         "title": "Proposta scritta",
@@ -97,13 +96,13 @@
   },
 
   "addons": {
-    "title": "Servizi aggiuntivi",
-    "subtitle": "Il sito base copre la maggior parte delle esigenze. Se vuoi qualcosa in più lo quotiamo separatamente.",
+    "title": "Servizi di visibilità AI",
+    "subtitle": "Il sito è la base. Questi servizi ti rendono leggibile ai sistemi che i pazienti usano davvero.",
     "items": [
-      { "title": "Calendario prenotazioni", "desc": "Integrazione Calendly o simile — i tuoi clienti prenotano direttamente dal sito senza chiamare." },
-      { "title": "Profilo Google Business", "desc": "Setup e ottimizzazione su Google Maps e Ricerca. Include anche il flusso per raccogliere recensioni." },
-      { "title": "SEO locale", "desc": "Meta tag, sitemap, Google Search Console, parole chiave per la tua zona. Costruito per farsi trovare." },
-      { "title": "Pagamenti online", "desc": "Accetta anticipi, pacchetti o gift card direttamente dal sito. I soldi arrivano sul tuo conto." }
+      { "title": "Audit di visibilità AI", "desc": "Controllo cosa risponde oggi l'AI su di te e da dove nascono esattamente i problemi." },
+      { "title": "Setup entità locale", "desc": "Google Business Profile e directory allineate a un'unica identità coerente e corretta." },
+      { "title": "Dati strutturati", "desc": "Markup che dice esplicitamente a motori di ricerca e AI chi sei, cosa tratti e dove ricevi." },
+      { "title": "Monitoraggio continuo", "desc": "Ricontrollo periodico di come l'AI ti descrive, con correzioni quando qualcosa si disallinea." }
     ]
   },
 
@@ -112,7 +111,7 @@
     "items": [
       {
         "q": "Quanto tempo ci vuole?",
-        "a": "Un sito vetrina standard è online in 1-2 settimane dall'inizio del progetto, revisioni incluse. I servizi aggiuntivi (prenotazioni, SEO, Stripe) aggiungono qualche giorno ciascuno."
+        "a": "Un sito vetrina standard è online in 1-2 settimane dall'inizio del progetto, revisioni incluse. I servizi aggiuntivi (entità locale, dati strutturati) aggiungono qualche giorno ciascuno."
       },
       {
         "q": "Posso modificare il sito da solo in futuro?",
@@ -120,7 +119,7 @@
       },
       {
         "q": "Ci sono costi ricorrenti?",
-        "a": "No. Paghi una volta per il sito. L'unica spesa ricorrente è il dominio (circa 15-20€ l'anno, probabilmente ce l'hai già). L'hosting su Vercel è gratuito per siti come il tuo."
+        "a": "No. Paghi una volta per il sito. L'unica spesa fissa è il dominio (circa 15-20€ l'anno, probabilmente ce l'hai già). Il monitoraggio della visibilità AI è l'unico servizio ricorrente opzionale, e resta sempre una tua scelta."
       },
       {
         "q": "E se non ho foto o testi?",
@@ -131,8 +130,8 @@
         "a": "Nei primi 30 giorni sistemo qualsiasi bug gratuitamente. Dopo, le correzioni sono veloci e a prezzi ragionevoli — nessun abbonamento obbligatorio."
       },
       {
-        "q": "Ti occupi anche di social media o pubblicità?",
-        "a": "Non è incluso nel servizio — mi concentro sul sito. Detto questo, con il mio background nel marketing posso darti una consulenza strategica gratuita di 30 minuti su cosa muoverebbe davvero l'ago per la tua attività."
+        "q": "Puoi garantire che l'AI mi consigli?",
+        "a": "No, e chi te lo promette sta esagerando. Quello che posso fare è costruire la base che ti rende trovabile e ben rappresentato — il resto dipende anche da recensioni, concorrenza e fattori che nessuno controlla del tutto."
       },
       {
         "q": "Perché costi meno di un'agenzia?",
@@ -145,7 +144,7 @@
     "title": "Chi sono",
     "tag": "Developer con la testa da marketer",
     "bio": "Sono Federico. Di giorno lavoro nel marketing internazionale per Lindt & Sprüngli — sono stato selezionato tra oltre 1.000 candidati per un programma di rotazione tra Svizzera, Italia e Australia. Nel tempo libero costruisco siti e prodotti digitali.",
-    "bio_2": "Il marketing mi ha insegnato che un sito bello che non converte non serve a niente. Ogni progetto parte da questa domanda: cosa deve fare questo sito per te?",
+    "bio_2": "Oggi \"convertire\" vuol dire anche essere trovato e capito bene dall'AI, non solo da Google. Costruisco io stesso gli strumenti per misurarlo, così posso dimostrare che funziona prima di venderlo.",
     "experience_title": "Esperienze",
     "education_title": "Formazione",
     "education": "Double MSc in Management e International Business — Bocconi + HEC Montréal. Premio di eccellenza accademica (1 dei 4 migliori studenti MSc dell'ateneo).",
