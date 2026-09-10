@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './ui/SectionHeader';
 import Card from './ui/Card';
+import { colors, fonts } from '@/lib/theme';
 
 const experience = [
   {
@@ -40,12 +41,12 @@ export default function About() {
               width: '72px',
               height: '72px',
               borderRadius: '50%',
-              background: '#e4eaf2',
+              background: colors.skyLight,
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              border: '1px solid #c8d3e0',
+              border: `1px solid ${colors.border}`,
               overflow: 'hidden',
             }}
           >
@@ -54,21 +55,21 @@ export default function About() {
           <div>
             <h2
               style={{
-                fontFamily: "'Fraunces', serif",
+                fontFamily: fonts.serif,
                 fontSize: '22px',
                 fontWeight: 600,
-                color: '#111827',
+                color: colors.ink,
                 letterSpacing: '-0.01em',
                 marginBottom: '3px',
               }}
             >
               Federico De Micco
             </h2>
-            <p style={{ fontSize: '13px', color: '#6b7280' }}>{t('about.tag')} · Sydney</p>
+            <p style={{ fontSize: '13px', color: colors.inkSubtle }}>{t('about.tag')} · Sydney</p>
           </div>
         </div>
 
-        <p style={{ fontSize: '14px', color: '#5a6475', lineHeight: 1.7, marginBottom: '24px', maxWidth: '560px' }}>
+        <p style={{ fontSize: '14px', color: colors.inkMuted, lineHeight: 1.7, marginBottom: '24px', maxWidth: '560px' }}>
           {t('about.bio')}
         </p>
 
@@ -93,21 +94,21 @@ export default function About() {
               </div>
               <div style={{ display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' as const, gap: '4px' }}>
                 <div>
-                  <span style={{ fontSize: '13px', fontWeight: 700, color: '#111827' }}>{e.company}</span>
-                  <span style={{ fontSize: '13px', color: '#6b7280' }}> — {e.role_key}</span>
+                  <span style={{ fontSize: '13px', fontWeight: 700, color: colors.ink }}>{e.company}</span>
+                  <span style={{ fontSize: '13px', color: colors.inkSubtle }}> — {e.role_key}</span>
                 </div>
-                <span style={{ fontSize: '11px', color: '#9ca3af', fontWeight: 500 }}>{e.location}</span>
+                <span style={{ fontSize: '11px', color: colors.inkFaint, fontWeight: 500 }}>{e.location}</span>
               </div>
             </div>
           ))}
         </div>
 
-        <div style={{ background: '#eef1f5', borderRadius: '14px', padding: '16px 20px', marginBottom: '24px' }}>
+        <div style={{ background: colors.bgSubtle, borderRadius: '14px', padding: '16px 20px', marginBottom: '24px' }}>
           <p
             style={{
               fontSize: '12px',
               fontWeight: 700,
-              color: '#2563ab',
+              color: colors.skyDark,
               marginBottom: '8px',
               textTransform: 'uppercase' as const,
               letterSpacing: '0.06em',
@@ -115,16 +116,16 @@ export default function About() {
           >
             {t('about.education_title')}
           </p>
-          <p style={{ fontSize: '13px', color: '#111827', fontWeight: 600, marginBottom: '2px' }}>
+          <p style={{ fontSize: '13px', color: colors.ink, fontWeight: 600, marginBottom: '2px' }}>
             Double MSc — Bocconi University + HEC Montréal
           </p>
-          <p style={{ fontSize: '12px', color: '#6b7280', marginBottom: '10px' }}>
+          <p style={{ fontSize: '12px', color: colors.inkSubtle, marginBottom: '10px' }}>
             avg 29.8/30 + 4.3/4.3 · Bourse d&apos;Excellence (1 of 4 best MSc students university-wide)
           </p>
-          <p style={{ fontSize: '13px', color: '#111827', fontWeight: 600, marginBottom: '2px' }}>
+          <p style={{ fontSize: '13px', color: colors.ink, fontWeight: 600, marginBottom: '2px' }}>
             BSc Business Administration — University of Naples Federico II
           </p>
-          <p style={{ fontSize: '12px', color: '#6b7280' }}>110/110 cum laude · Erasmus 6 months in Barcelona</p>
+          <p style={{ fontSize: '12px', color: colors.inkSubtle }}>110/110 cum laude · Erasmus 6 months in Barcelona</p>
         </div>
 
         <div>
@@ -134,7 +135,7 @@ export default function About() {
               fontWeight: 700,
               textTransform: 'uppercase' as const,
               letterSpacing: '0.08em',
-              color: '#9ca3af',
+              color: colors.inkFaint,
               marginBottom: '12px',
             }}
           >
@@ -142,7 +143,7 @@ export default function About() {
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {funItems.map((item, i) => (
-              <p key={i} style={{ fontSize: '13px', color: '#5a6475', lineHeight: 1.5 }}>
+              <p key={i} style={{ fontSize: '13px', color: colors.inkMuted, lineHeight: 1.5 }}>
                 {item}
               </p>
             ))}

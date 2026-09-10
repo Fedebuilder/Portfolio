@@ -1,3 +1,5 @@
+import { colors, shadows } from '@/lib/theme';
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -11,11 +13,11 @@ export default function Card({ children, className = 'card-pad', padding = '28px
     <div
       className={className}
       style={{
-        background: '#fff',
-        border: '1px solid #c8d3e0',
+        background: colors.surface,
+        border: `1px solid ${colors.border}`,
         borderRadius: '20px',
         padding,
-        boxShadow: '0 2px 16px rgba(26,26,46,0.07)',
+        boxShadow: shadows.card,
       }}
     >
       {children}

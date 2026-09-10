@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './ui/SectionHeader';
 import Card from './ui/Card';
+import { colors, fonts } from '@/lib/theme';
 
 const icons = ['🛠️', '🔑', '📬'];
 
@@ -16,21 +17,21 @@ export default function AfterSale() {
       <Card>
         <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {boxes.map((item, i) => (
-            <div key={i} style={{ background: '#eef1f5', borderRadius: '14px', padding: '20px 22px' }}>
+            <div key={i} style={{ background: colors.bgSubtle, borderRadius: '14px', padding: '20px 22px' }}>
               <div style={{ fontSize: '24px', marginBottom: '10px' }}>{icons[i]}</div>
               <h3
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: fonts.serif,
                   fontSize: '15px',
                   fontWeight: 600,
-                  color: '#111827',
+                  color: colors.ink,
                   marginBottom: '6px',
                   letterSpacing: '-0.01em',
                 }}
               >
                 {item.title}
               </h3>
-              <p style={{ fontSize: '12.5px', color: '#5a6475', lineHeight: 1.6 }}>{item.desc}</p>
+              <p style={{ fontSize: '12.5px', color: colors.inkMuted, lineHeight: 1.6 }}>{item.desc}</p>
             </div>
           ))}
         </div>

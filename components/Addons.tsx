@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './ui/SectionHeader';
 import Card from './ui/Card';
+import { colors, fonts } from '@/lib/theme';
 
 const icons = ['🔍', '🗺️', '🏷️', '📡'];
 
@@ -14,7 +15,7 @@ export default function Addons() {
       <SectionHeader label={t('addons.title')} />
 
       <Card>
-        <p style={{ fontSize: '14px', color: '#5a6475', lineHeight: 1.7, marginBottom: '22px', maxWidth: '560px' }}>
+        <p style={{ fontSize: '14px', color: colors.inkMuted, lineHeight: 1.7, marginBottom: '22px', maxWidth: '560px' }}>
           {t('addons.subtitle')}
         </p>
 
@@ -27,7 +28,7 @@ export default function Addons() {
                 gap: '14px',
                 alignItems: 'flex-start',
                 padding: '16px 18px',
-                border: '1px solid #e4eaf2',
+                border: `1px solid ${colors.skyLight}`,
                 borderRadius: '14px',
               }}
             >
@@ -36,7 +37,7 @@ export default function Addons() {
                   fontSize: '20px',
                   width: '40px',
                   height: '40px',
-                  background: '#eef1f5',
+                  background: colors.bgSubtle,
                   borderRadius: '10px',
                   flexShrink: 0,
                   display: 'flex',
@@ -49,17 +50,17 @@ export default function Addons() {
               <div style={{ flex: 1 }}>
                 <h3
                   style={{
-                    fontFamily: "'Fraunces', serif",
+                    fontFamily: fonts.serif,
                     fontSize: '15px',
                     fontWeight: 600,
-                    color: '#111827',
+                    color: colors.ink,
                     marginBottom: '4px',
                     letterSpacing: '-0.01em',
                   }}
                 >
                   {a.title}
                 </h3>
-                <p style={{ fontSize: '12.5px', color: '#5a6475', lineHeight: 1.55 }}>{a.desc}</p>
+                <p style={{ fontSize: '12.5px', color: colors.inkMuted, lineHeight: 1.55 }}>{a.desc}</p>
               </div>
             </div>
           ))}

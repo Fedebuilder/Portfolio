@@ -15,7 +15,6 @@ body {
 @media (max-width: 900px) {
   /* tighter page + card padding on small screens */
   .page-container { padding-left: 16px !important; padding-right: 16px !important; }
-  .tpl-card { padding-left: 18px !important; padding-right: 18px !important; }
   .card-pad { padding-left: 18px !important; padding-right: 18px !important; }
 
   /* collapse multi-column grids to a single column */

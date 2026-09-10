@@ -4,13 +4,13 @@ import './globals.css';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-jakarta',
   display: 'swap',
 });
 
 const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-fraunces',
   display: 'swap',
 });
 

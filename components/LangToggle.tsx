@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname, useRouter } from 'next/navigation';
+import { colors } from '@/lib/theme';
 
 const LOCALES = ['en', 'it'] as const;
 type Locale = (typeof LOCALES)[number];
@@ -30,9 +31,9 @@ export default function LangToggle({ currentLocale }: LangToggleProps) {
         gap: '6px',
         padding: '6px 14px',
         borderRadius: '20px',
-        border: '1.5px solid #2563ab',
+        border: `1.5px solid ${colors.skyDark}`,
         background: 'transparent',
-        color: '#2563ab',
+        color: colors.skyDark,
         fontSize: '13px',
         fontWeight: 600,
         fontFamily: 'inherit',
@@ -41,12 +42,12 @@ export default function LangToggle({ currentLocale }: LangToggleProps) {
         transition: 'all 0.15s ease',
       }}
       onMouseEnter={(e) => {
-        (e.currentTarget as HTMLButtonElement).style.background = '#2563ab';
+        (e.currentTarget as HTMLButtonElement).style.background = colors.skyDark;
         (e.currentTarget as HTMLButtonElement).style.color = '#fff';
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLButtonElement).style.background = 'transparent';
-        (e.currentTarget as HTMLButtonElement).style.color = '#2563ab';
+        (e.currentTarget as HTMLButtonElement).style.color = colors.skyDark;
       }}
       aria-label={`Switch to ${switchTo === 'en' ? 'English' : 'Italiano'}`}
     >

@@ -1,5 +1,6 @@
 'use client';
 import { useTranslation } from 'react-i18next';
+import { colors, fonts, shadows } from '@/lib/theme';
 
 export default function Hero() {
   const { t } = useTranslation('common');
@@ -16,23 +17,23 @@ export default function Hero() {
         <div className="hero-text" style={{ flex: '1 1 420px', minWidth: 0 }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '7px',
-            background: '#ddeeff', color: '#2563ab', fontSize: '12px',
+            background: '#ddeeff', color: colors.skyDark, fontSize: '12px',
             fontWeight: 600, padding: '5px 14px', borderRadius: '100px',
             marginBottom: '20px'
           }}>
-            <span style={{ width: '6px', height: '6px', background: '#3b82c4', borderRadius: '50%', display: 'inline-block' }} />
+            <span style={{ width: '6px', height: '6px', background: colors.sky, borderRadius: '50%', display: 'inline-block' }} />
             {t('hero.tag')}
           </div>
           <h1 className="hero-h1" style={{
-            fontFamily: "'Fraunces', serif", fontSize: '46px', fontWeight: 600,
-            lineHeight: 1.05, letterSpacing: '-0.025em', color: '#111827', marginBottom: '18px'
+            fontFamily: fonts.serif, fontSize: '46px', fontWeight: 600,
+            lineHeight: 1.05, letterSpacing: '-0.025em', color: colors.ink, marginBottom: '18px'
           }}>
             {t('hero.title_1')}<br />
             {t('hero.title_2')}{' '}
-            <em style={{ fontStyle: 'italic', fontWeight: 500, color: '#2563ab' }}>{t('hero.title_3')}</em>
+            <em style={{ fontStyle: 'italic', fontWeight: 500, color: colors.skyDark }}>{t('hero.title_3')}</em>
           </h1>
           <p style={{
-            fontSize: '16px', color: '#4b5563', lineHeight: 1.65,
+            fontSize: '16px', color: colors.inkMuted, lineHeight: 1.65,
             marginBottom: '24px', maxWidth: '480px'
           }}>
             {t('hero.subtitle')}
@@ -40,8 +41,8 @@ export default function Hero() {
           <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px' }}>
             {['Next.js', 'React', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS'].map(tag => (
               <span key={tag} style={{
-                background: '#fff', border: '1px solid #c8d3e0',
-                color: '#374151', fontSize: '12px', fontWeight: 600,
+                background: colors.surface, border: `1px solid ${colors.border}`,
+                color: colors.inkSoft, fontSize: '12px', fontWeight: 600,
                 padding: '5px 13px', borderRadius: '100px'
               }}>{tag}</span>
             ))}
@@ -54,9 +55,9 @@ export default function Hero() {
             width: '260px', height: '320px',
             borderRadius: '24px',
             overflow: 'hidden',
-            background: '#e4eaf2',
-            border: '1px solid #c8d3e0',
-            boxShadow: '0 8px 30px rgba(26,26,46,0.12)',
+            background: colors.skyLight,
+            border: `1px solid ${colors.border}`,
+            boxShadow: shadows.photo,
           }}>
             <img
               src="/federico-pups.jpg"
@@ -71,7 +72,7 @@ export default function Hero() {
             />
           </div>
           <p style={{
-            fontSize: '13px', color: '#4b5563',
+            fontSize: '13px', color: colors.inkMuted,
             fontStyle: 'italic' as const, textAlign: 'center' as const,
             maxWidth: '260px', lineHeight: 1.5
           }}>

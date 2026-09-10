@@ -2,6 +2,7 @@
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './ui/SectionHeader';
 import Card from './ui/Card';
+import { colors, fonts } from '@/lib/theme';
 
 export default function Process() {
   const { t } = useTranslation('common');
@@ -21,15 +22,15 @@ export default function Process() {
                 gap: '18px',
                 alignItems: 'flex-start',
                 paddingBottom: i < steps.length - 1 ? '18px' : '0',
-                borderBottom: i < steps.length - 1 ? '1px solid #eef1f5' : 'none',
+                borderBottom: i < steps.length - 1 ? `1px solid ${colors.bgSubtle}` : 'none',
               }}
             >
               <div
                 style={{
-                  fontFamily: "'Fraunces', serif",
+                  fontFamily: fonts.serif,
                   fontSize: '22px',
                   fontWeight: 600,
-                  color: '#3b82c4',
+                  color: colors.sky,
                   flexShrink: 0,
                   lineHeight: 1,
                   width: '36px',
@@ -40,17 +41,17 @@ export default function Process() {
               <div>
                 <h3
                   style={{
-                    fontFamily: "'Fraunces', serif",
+                    fontFamily: fonts.serif,
                     fontSize: '16px',
                     fontWeight: 600,
-                    color: '#111827',
+                    color: colors.ink,
                     marginBottom: '5px',
                     letterSpacing: '-0.01em',
                   }}
                 >
                   {s.title}
                 </h3>
-                <p style={{ fontSize: '13px', color: '#5a6475', lineHeight: 1.6 }}>{s.desc}</p>
+                <p style={{ fontSize: '13px', color: colors.inkMuted, lineHeight: 1.6 }}>{s.desc}</p>
               </div>
             </div>
           ))}

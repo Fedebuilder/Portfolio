@@ -1,6 +1,7 @@
 'use client';
 import { useTranslation } from 'react-i18next';
 import SectionHeader from './ui/SectionHeader';
+import { colors, fonts, shadows } from '@/lib/theme';
 
 const projects = [
   {
@@ -48,30 +49,30 @@ export default function Projects() {
         {projects.map((p) => (
           <a key={p.key} href={p.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', display: 'block' }}>
             <div
-              style={{ background: '#fff', border: '1px solid #c8d3e0', borderRadius: '20px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(26,26,46,0.07)', cursor: 'pointer' }}
+              style={{ background: colors.surface, border: `1px solid ${colors.border}`, borderRadius: '20px', overflow: 'hidden', boxShadow: shadows.card, cursor: 'pointer' }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 28px rgba(26,26,46,0.13)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = shadows.cardHover;
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(0)';
-                (e.currentTarget as HTMLDivElement).style.boxShadow = '0 2px 16px rgba(26,26,46,0.07)';
+                (e.currentTarget as HTMLDivElement).style.boxShadow = shadows.card;
               }}
             >
-              <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: '#e4eaf2' }}>
+              <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', background: colors.skyLight }}>
                 <img src={p.screenshot} alt={t(p.title_key)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
               </div>
               <div style={{ padding: '20px 24px' }}>
-                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase' as const, letterSpacing: '0.1em', color: '#3b82c4', marginBottom: '5px' }}>
+                <p style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase' as const, letterSpacing: '0.1em', color: colors.sky, marginBottom: '5px' }}>
                   {t(p.type_key)}
                 </p>
-                <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: '18px', fontWeight: 600, color: '#111827', marginBottom: '8px', letterSpacing: '-0.01em' }}>
+                <h2 style={{ fontFamily: fonts.serif, fontSize: '18px', fontWeight: 600, color: colors.ink, marginBottom: '8px', letterSpacing: '-0.01em' }}>
                   {t(p.title_key)}
                 </h2>
-                <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.6, marginBottom: '14px' }}>{t(p.desc_key)}</p>
+                <p style={{ fontSize: '13px', color: colors.inkSubtle, lineHeight: 1.6, marginBottom: '14px' }}>{t(p.desc_key)}</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '5px' }}>
                   {p.stack.map((s) => (
-                    <span key={s} style={{ background: '#eef1f5', border: '1px solid #c8d3e0', color: '#374151', fontSize: '11px', fontWeight: 600, padding: '2px 10px', borderRadius: '100px' }}>
+                    <span key={s} style={{ background: colors.bgSubtle, border: `1px solid ${colors.border}`, color: colors.inkSoft, fontSize: '11px', fontWeight: 600, padding: '2px 10px', borderRadius: '100px' }}>
                       {s}
                     </span>
                   ))}
