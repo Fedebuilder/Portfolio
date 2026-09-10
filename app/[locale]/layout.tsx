@@ -1,32 +1,49 @@
-// app/[locale]/layout.tsx
-// Replace your current app/layout.tsx with this file,
-// and move it to app/[locale]/layout.tsx
-
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Fraunces } from 'next/font/google';
 import I18nProvider from '@/components/I18nProvider';
-import '../globals.css'; // adjust path if needed
 
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-});
+const LOCALES = ['en', 'it'] as const;
+type Locale = (typeof LOCALES)[number];
 
-const fraunces = Fraunces({
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
-});
+const TITLES: Record<Locale, string> = {
+  en: 'Federico De Micco — Web Developer & AI Search Visibility',
+  it: 'Federico De Micco — Sviluppatore Web & Visibilità AI',
+};
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
+const DESCRIPTIONS: Record<Locale, string> = {
+  en: "I build sites and shape AI visibility so health & wellness practitioners come up correctly when patients ask ChatGPT, Perplexity or Google AI Overviews.",
+  it: 'Costruisco siti e lavoro sulla visibilità AI perché i professionisti della salute risultino trovabili e ben rappresentati quando i pazienti chiedono a ChatGPT, Perplexity o Google AI Overviews.',
 };
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'it' }];
+  return LOCALES.map((locale) => ({ locale }));
 }
 
+export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
+  const locale: Locale = (LOCALES as readonly string[]).includes(params.locale)
+    ? (params.locale as Locale)
+    : 'en';
+
+  return {
+    title: TITLES[locale],
+    description: DESCRIPTIONS[locale],
+    alternates: {
+      canonical: `/${locale}`,
+      languages: { en: '/en', it: '/it' },
+    },
+    openGraph: {
+      title: TITLES[locale],
+      description: DESCRIPTIONS[locale],
+      url: `https://www.federicodemicco.dev/${locale}`,
+      locale: locale === 'it' ? 'it_IT' : 'en_US',
+      type: 'website',
+    },
+  };
+}
+
+// NOTE: this used to render its own <html>/<body>, nested inside the root
+// layout's <html>/<body>. That's invalid HTML (you can't nest <html> in
+// <html>) and was a real bug, not just messy code. Now it only wraps children
+// in the i18n provider; the root layout owns the single <html>/<body>.
 export default function LocaleLayout({
   children,
   params,
@@ -34,13 +51,5 @@ export default function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  return (
-    <html lang={params.locale} className={`${plusJakarta.variable} ${fraunces.variable}`}>
-      <body>
-        <I18nProvider locale={params.locale}>
-          {children}
-        </I18nProvider>
-      </body>
-    </html>
-  );
+  return <I18nProvider locale={params.locale}>{children}</I18nProvider>;
 }
