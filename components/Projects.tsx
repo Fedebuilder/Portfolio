@@ -31,7 +31,11 @@ const projects = [
     desc_key: 'projects.mountainhorses_desc',
     stack: ['Positioning', 'AI search visibility', 'Content strategy'],
     link: 'https://mountainhorsesoutfitters.nz',
-    screenshot: 'https://api.microlink.io/?url=https://mountainhorsesoutfitters.nz&screenshot=true&meta=false&embed=screenshot.url',
+    // Their site sits behind bot protection (Cloudflare-style challenge),
+    // so Microlink can't screenshot it live — it just captures the
+    // "verifying you are not a robot" page. Using a manually captured
+    // static image instead. Drop the file at public/mountainhorses.jpeg.
+    screenshot: '/mountainhorses.jpeg',
   },
 ];
 
