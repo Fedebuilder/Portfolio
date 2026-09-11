@@ -8,13 +8,14 @@
 
   "hero": {
     "tag": "Web Developer · AI Search Visibility",
-    "title_1": "Your next patient",
-    "title_2": "asks an AI",
-    "title_3": "for advice.",
-    "subtitle": "I build sites and shape your AI visibility so that when they do, your name comes up — with the right information. One-off payment, no monthly fees.",
+    "title_1": "What does your client find",
+    "title_2": "when they search you",
+    "title_3": "on ChatGPT?",
+    "subtitle": "I build the site — or fix the one you already have — and shape your AI visibility, so the answer is you, with the right information. One-off payment, no monthly fees.",
+    "logos_caption": "Built to be found on",
     "cta_primary": "See my work",
     "cta_secondary": "Get in touch",
-    "photo_caption": "Developers can seem hard to approach. I try not to be."
+    "photo_caption": "Developers can seem hard to approach. Also, I stop for stray dogs."
   },
 
   "shift": {
@@ -39,7 +40,7 @@
   },
 
   "projects": {
-    "title": "Real projects",
+    "title": "Proof, not promises",
     "subtitle": "Not mockups. These are live sites built for real clients.",
     "camilla_title": "Camilla Galli — Osteopath",
     "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. Current case study for the AI-visibility work above.",
@@ -70,8 +71,8 @@
         "desc": "We start once the first payment is confirmed. Keeps us both accountable."
       },
       {
-        "title": "I build it",
-        "desc": "Showcase sites take 1–2 weeks. You get updates along the way."
+        "title": "I build it — or fix it",
+        "desc": "New showcase sites take 1–2 weeks. Fixing AI visibility on a site you already have is usually faster. You get updates along the way."
       },
       {
         "title": "Launch & handover",
@@ -99,8 +100,8 @@
   },
 
   "addons": {
-    "title": "AI visibility add-ons",
-    "subtitle": "The website is the foundation. These make you legible to the systems patients actually ask.",
+    "title": "How I make you visible",
+    "subtitle": "The website is the foundation. These make you legible to the systems your customers actually ask.",
     "items": [
       { "title": "AI visibility audit", "desc": "I check what AI currently says about you, and trace exactly where the gaps come from." },
       { "title": "Local entity setup", "desc": "Google Business Profile and directory listings aligned to one consistent, correct identity." },
@@ -115,6 +116,10 @@
       {
         "q": "How long does a site take?",
         "a": "A single-page showcase site takes 1–2 weeks from deposit to launch. Multi-page sites take 2–4 weeks depending on complexity."
+      },
+      {
+        "q": "I already have a website — can you still help?",
+        "a": "Yes — that's actually most of my current work. I audit what AI currently says about you, fix the gaps (wrong details, missing schema, inconsistent listings), and only rebuild the site itself if it's genuinely holding you back."
       },
       {
         "q": "Can I update the content myself?",

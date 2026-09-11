@@ -1,6 +1,7 @@
 'use client';
 import { useTranslation } from 'react-i18next';
 import { colors, fonts, shadows } from '@/lib/theme';
+import LogoMarquee from './ui/LogoMarquee';
 
 export default function Hero() {
   const { t } = useTranslation('common');
@@ -38,7 +39,7 @@ export default function Hero() {
           }}>
             {t('hero.subtitle')}
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginBottom: '28px' }}>
             {['Next.js', 'React', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS'].map(tag => (
               <span key={tag} style={{
                 background: colors.surface, border: `1px solid ${colors.border}`,
@@ -47,6 +48,11 @@ export default function Hero() {
               }}>{tag}</span>
             ))}
           </div>
+
+          <p style={{ fontSize: '11px', fontWeight: 700, color: colors.inkFaint, textTransform: 'uppercase' as const, letterSpacing: '0.08em', marginBottom: '12px' }}>
+            {t('hero.logos_caption')}
+          </p>
+          <LogoMarquee />
         </div>
 
         {/* Foto + caption */}

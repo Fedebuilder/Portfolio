@@ -8,13 +8,14 @@
 
   "hero": {
     "tag": "Sviluppo Web · Visibilità AI",
-    "title_1": "Il tuo prossimo paziente",
-    "title_2": "chiede consiglio",
-    "title_3": "a un'AI.",
-    "subtitle": "Costruisco siti e lavoro sulla tua visibilità AI perché, quando succede, il tuo nome esca — con le informazioni giuste. Pagamento unico, nessun canone mensile.",
+    "title_1": "Cosa trova un tuo cliente",
+    "title_2": "quando ti cerca",
+    "title_3": "su ChatGPT?",
+    "subtitle": "Costruisco il sito — o sistemo quello che hai già — e lavoro sulla tua visibilità AI, così la risposta sei tu, con le informazioni giuste. Pagamento unico, nessun canone mensile.",
+    "logos_caption": "Pensato per essere trovato su",
     "cta_primary": "Guarda i progetti",
     "cta_secondary": "Contattami",
-    "photo_caption": "I developer possono sembrare un po' particolari — ma giuro che non lo sono 🐶"
+    "photo_caption": "I developer possono sembrare inavvicinabili. Anche io, se non fosse per i cani randagi che accarezzo."
   },
 
   "shift": {
@@ -39,7 +40,7 @@
   },
 
   "projects": {
-    "title": "Progetti",
+    "title": "Prove, non promesse",
     "subtitle": "Non mockup. Siti live, clienti veri.",
     "camilla_title": "Camilla Galli — Osteopata",
     "camilla_desc": "Sito vetrina per un'osteopata a Milano, costruito per la ricerca fin dal primo giorno. Case study in corso per il lavoro di visibilità AI descritto sopra.",
@@ -70,8 +71,8 @@
         "desc": "Pago standard nel freelance. Parto dopo il primo acconto, il saldo solo quando sei soddisfatto."
       },
       {
-        "title": "Costruisco e ti aggiorno",
-        "desc": "Prima versione in circa una settimana. Hai 2 round di revisioni inclusi — la maggior parte dei clienti ne usa uno."
+        "title": "Costruisco — o sistemo — e ti aggiorno",
+        "desc": "Un sito nuovo richiede circa una settimana. Sistemare la visibilità AI su un sito che hai già è di solito più rapido. Hai 2 round di revisioni inclusi."
       },
       {
         "title": "Lancio e consegna",
@@ -100,7 +101,7 @@
 
   "addons": {
     "title": "Servizi di visibilità AI",
-    "subtitle": "Il sito è la base. Questi servizi ti rendono leggibile ai sistemi che i pazienti usano davvero.",
+    "subtitle": "Il sito è la base. Questi servizi ti rendono leggibile ai sistemi che i tuoi clienti usano davvero.",
     "items": [
       { "title": "Audit di visibilità AI", "desc": "Controllo cosa risponde oggi l'AI su di te e da dove nascono esattamente i problemi." },
       { "title": "Setup entità locale", "desc": "Google Business Profile e directory allineate a un'unica identità coerente e corretta." },
@@ -115,6 +116,10 @@
       {
         "q": "Quanto tempo ci vuole?",
         "a": "Un sito vetrina standard è online in 1-2 settimane dall'inizio del progetto, revisioni incluse. I servizi aggiuntivi (entità locale, dati strutturati) aggiungono qualche giorno ciascuno."
+      },
+      {
+        "q": "Ho già un sito — puoi aiutarmi comunque?",
+        "a": "Sì — è di fatto la maggior parte del lavoro che faccio oggi. Controllo cosa dice già l'AI su di te, sistemo i problemi (dati sbagliati, schema mancante, directory incoerenti), e ricostruisco il sito solo se è davvero quello a frenarti."
       },
       {
         "q": "Posso modificare il sito da solo in futuro?",
