@@ -30,7 +30,7 @@ export default function About() {
   const funItems = t('about.fun_items', { returnObjects: true }) as string[];
 
   return (
-    <section style={{ paddingBottom: '40px' }}>
+    <section id="about" style={{ paddingBottom: '40px', scrollMarginTop: '32px' }}>
       <SectionHeader label={t('about.title')} />
 
       <Card>

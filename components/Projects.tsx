@@ -43,7 +43,7 @@ export default function Projects() {
   const { t } = useTranslation('common');
 
   return (
-    <section style={{ paddingBottom: '48px' }}>
+    <section id="projects" style={{ paddingBottom: '48px', scrollMarginTop: '32px' }}>
       <SectionHeader label={t('projects.title')} />
 
       {/* auto-fit instead of a fixed 2-col grid: handles 2 or 3 cards cleanly

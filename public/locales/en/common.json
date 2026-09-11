@@ -14,7 +14,8 @@
     "subtitle": "I build the site — or fix the one you already have — and shape your AI visibility, so the answer is you, with the right information. One-off payment, no monthly fees.",
     "logos_caption": "Built to be found on",
     "cta_primary": "First call's free — text me",
-    "cta_secondary": "Get in touch",
+    "cta_secondary": "See my work",
+    "cta_tertiary": "More about me",
     "photo_caption": "Not exactly a ruthless salesman. Clearly — a puppy can stop me mid-pitch."
   },
 
@@ -52,6 +53,12 @@
     "mountainhorses_desc": "Digital marketing and AI-visibility consulting for a horse trekking outfitter in New Zealand's high country — the same findability principles as the health-AEO work above, applied to adventure tourism.",
     "mountainhorses_tag": "Marketing & AI consulting",
     "visit": "Visit site →"
+  },
+
+  "midcta": {
+    "title": "See where you actually stand.",
+    "subtitle": "15-minute call. No pitch, no obligation — just a look at what AI currently says about you.",
+    "cta": "First call's free — text me"
   },
 
   "process": {
@@ -143,6 +150,10 @@
       {
         "q": "Why are you cheaper than an agency?",
         "a": "I do this on the side to fund travel. No office, no account managers, no overhead. You get agency-level work at a fraction of the price."
+      },
+      {
+        "q": "How do payments work?",
+        "a": "You get a written proposal — scope, price, timeline — within 48 hours of our call. 50% upfront to start, 50% on delivery. Keeps us both accountable."
       }
     ]
   },

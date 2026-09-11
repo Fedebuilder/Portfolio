@@ -14,7 +14,8 @@
     "subtitle": "Costruisco il sito — o sistemo quello che hai già — e lavoro sulla tua visibilità AI, così la risposta sei tu, con le informazioni giuste. Pagamento unico, nessun canone mensile.",
     "logos_caption": "Pensato per essere trovato su",
     "cta_primary": "Prima chiamata gratis — scrivimi",
-    "cta_secondary": "Contattami",
+    "cta_secondary": "Guarda i progetti",
+    "cta_tertiary": "Un po' su di me",
     "photo_caption": "Non sono un venditore spietato. Ovvio — un cucciolo mi ferma a metà frase."
   },
 
@@ -52,6 +53,12 @@
     "mountainhorses_desc": "Consulenza di marketing digitale e visibilità AI per un outfitter di trekking a cavallo nell'alta montagna della Nuova Zelanda — gli stessi principi di findability del lavoro AEO qui sopra, applicati al turismo d'avventura.",
     "mountainhorses_tag": "Consulenza marketing & AI",
     "visit": "Apri il sito →"
+  },
+
+  "midcta": {
+    "title": "Scopri a che punto sei davvero.",
+    "subtitle": "Chiamata di 15 minuti. Nessuna vendita, nessun impegno — solo uno sguardo a cosa dice oggi l'AI su di te.",
+    "cta": "Prima chiamata gratis — scrivimi"
   },
 
   "process": {
@@ -143,6 +150,10 @@
       {
         "q": "Perché costi meno di un'agenzia?",
         "a": "Nessun ufficio, nessun team, nessun overhead. Lavoro in proprio nel tempo libero — il che mi permette di prezzare il lavoro per quello che vale, senza dover coprire le spese fisse di uno studio."
+      },
+      {
+        "q": "Come funzionano i pagamenti?",
+        "a": "Ricevi una proposta scritta — scope, prezzo, tempi — entro 48 ore dalla chiamata. 50% all'inizio, 50% alla consegna. Tiene entrambi responsabili."
       }
     ]
   },
