@@ -32,6 +32,7 @@ export default function Hero() {
             {t('hero.title_1')}<br />
             {t('hero.title_2')}{' '}
             <em style={{ fontStyle: 'italic', fontWeight: 500, color: colors.skyDark }}>{t('hero.title_3')}</em>
+            {t('hero.title_4')} 
           </h1>
           <p style={{
             fontSize: '16px', color: colors.inkMuted, lineHeight: 1.65,
