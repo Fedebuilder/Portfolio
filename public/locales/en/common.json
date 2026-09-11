@@ -8,15 +8,15 @@
 
   "hero": {
     "tag": "Web Developer · AI Search Visibility",
-    "title_1": "What does a client find",
+    "title_1": "What does your next client find",
     "title_2": "about you",
     "title_3": "on ChatGPT?",
     "subtitle": "I build the site — or fix the one you already have — and shape your AI visibility, so the answer is you, with the right information. One-off payment, no monthly fees.",
     "logos_caption": "Built to be found on",
-    "cta_primary": "First call's free — text me",
-    "cta_secondary": "See my work",
-    "cta_tertiary": "More about me",
-    "photo_caption": "Not exactly a ruthless salesman. Clearly — a puppy can stop me mid-pitch."
+    "cta_primary": "Text me to know more",
+    "cta_secondary": "Or see my work",
+    "cta_tertiary": "And discover more about me",
+    "photo_caption": "Not exactly the ruthless salesman you had in mind. A puppy could stop me mid-pitch."
   },
 
   "shift": {
@@ -41,8 +41,7 @@
   },
 
   "projects": {
-    "title": "Proof, not promises",
-    "subtitle": "Not mockups. These are live sites built for real clients.",
+    "title": "Few of the projects I've worked on",
     "camilla_title": "Camilla Galli — Osteopath",
     "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. Current case study for the AI-visibility work above.",
     "camilla_tag": "Showcase site",
@@ -58,7 +57,7 @@
   "midcta": {
     "title": "See where you actually stand.",
     "subtitle": "15-minute call. No pitch, no obligation — just a look at what AI currently says about you.",
-    "cta": "First call's free — text me"
+    "cta": "Convinced you to text me?"
   },
 
   "process": {
@@ -161,16 +160,16 @@
   "about": {
     "title": "About me",
     "tag": "Developer with a marketing brain",
-    "bio": "I'm Federico — a full-stack developer based in Sydney. I currently work at Lindt & Sprüngli in international marketing, which is how I think about websites differently from most developers: not just \"does it look good\" but \"does it convert.\"",
+    "bio": "I'm Fede — growth consultant based in Sydney. I currently work at Lindt & Sprüngli doing International Marketing, and I've got L'Oreal and Amazon in my background.",
     "bio_2": "These days \"converting\" also means being found and correctly understood by AI, not just by Google. I build the tooling myself, so I can prove it works before I sell it.",
     "experience_title": "Where I've worked",
     "education_title": "Education",
     "education": "Double MSc in Management & International Business — Bocconi University + HEC Montréal. Academic excellence award (1 of 4 best MSc students university-wide).",
-    "fun_title": "What I'd talk about over dinner",
+    "fun_title": "We can talk about business, but if you want to know me better:",
     "fun_items": [
-      "Organised Fred Again on a rooftop in Naples — ended up on YouTube with 2M+ views",
-      "Played competitive water polo at national level for 10 years",
-      "6 months solo backpacking across Southeast Asia"
+      "We can talk of when I convinced Fred Again to play on my rooftop in Naples — you can find us on YouTube with 3M+ views",
+      "Or we can talk about sports! I've played water polo at competitive level for 10 years",
+      "But also about travelling, best time of my life was 6 months solo backpacking across Southeast Asia"
     ]
   },
 

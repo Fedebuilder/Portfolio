@@ -8,15 +8,15 @@
 
   "hero": {
     "tag": "Sviluppo Web · Visibilità AI",
-    "title_1": "Cosa trova un cliente",
+    "title_1": "Cosa trova il tuo prossimo cliente",
     "title_2": "su di te",
     "title_3": "su ChatGPT?",
     "subtitle": "Costruisco il sito — o sistemo quello che hai già — e lavoro sulla tua visibilità AI, così la risposta sei tu, con le informazioni giuste. Pagamento unico, nessun canone mensile.",
     "logos_caption": "Pensato per essere trovato su",
-    "cta_primary": "Prima chiamata gratis — scrivimi",
-    "cta_secondary": "Guarda i progetti",
-    "cta_tertiary": "Un po' su di me",
-    "photo_caption": "Non sono un venditore spietato. Ovvio — un cucciolo mi ferma a metà frase."
+    "cta_primary": "Scrivimi per saperne di più",
+    "cta_secondary": "O guarda i miei progetti",
+    "cta_tertiary": "E scopri di più su di me",
+    "photo_caption": "Non esattamente il venditore spietato che avevi in mente. Un cucciolo potrebbe fermarmi a metà pitch."
   },
 
   "shift": {
@@ -37,11 +37,11 @@
         "desc": "Il sito da solo non basta. Conta se è coerente con Google Business, LinkedIn e le directory di settore su cui l'AI si basa davvero."
       }
     ],
-    "closing": "È questo lo scarto che chiudo: renderti trovabile, e raccontato bene, quando conta."
+    "closing": "È questo il gap che chiudo: renderti trovabile, e raccontato bene, quando conta."
   },
 
   "projects": {
-    "title": "Prove, non promesse",
+    "title": "Alcuni dei progetti su cui ho lavorato",
     "subtitle": "Non mockup. Siti live, clienti veri.",
     "camilla_title": "Camilla Galli — Osteopata",
     "camilla_desc": "Sito vetrina per un'osteopata a Milano, costruito per la ricerca fin dal primo giorno. Case study in corso per il lavoro di visibilità AI descritto sopra.",
@@ -58,7 +58,7 @@
   "midcta": {
     "title": "Scopri a che punto sei davvero.",
     "subtitle": "Chiamata di 15 minuti. Nessuna vendita, nessun impegno — solo uno sguardo a cosa dice oggi l'AI su di te.",
-    "cta": "Prima chiamata gratis — scrivimi"
+    "cta": "Ti ho convinto a scrivermi?"
   },
 
   "process": {
@@ -161,16 +161,16 @@
   "about": {
     "title": "Chi sono",
     "tag": "Developer con la testa da marketer",
-    "bio": "Sono Federico. Di giorno lavoro nel marketing internazionale per Lindt & Sprüngli — sono stato selezionato tra oltre 1.000 candidati per un programma di rotazione tra Svizzera, Italia e Australia. Nel tempo libero costruisco siti e prodotti digitali.",
+    "bio": "Sono Fede — consulente marketing e growth con base a Sydney. Faccio Marketing in Lindt & Sprüngli, ma ho anche L'Oreal e Amazon nel mio bagaglio.",
     "bio_2": "Oggi \"convertire\" vuol dire anche essere trovato e capito bene dall'AI, non solo da Google. Costruisco io stesso gli strumenti per misurarlo, così posso dimostrare che funziona prima di venderlo.",
     "experience_title": "Esperienze",
     "education_title": "Formazione",
     "education": "Double MSc in Management e International Business — Bocconi + HEC Montréal. Premio di eccellenza accademica (1 dei 4 migliori studenti MSc dell'ateneo).",
-    "fun_title": "Cose di cui parlo volentieri",
+    "fun_title": "Possiamo parlare di lavoro, ma se vuoi conoscermi meglio:",
     "fun_items": [
-      "🎵 Ho organizzato Fred Again su un rooftop a Napoli — il video è finito su YouTube con oltre 2 milioni di visualizzazioni",
-      "🤿 Ho giocato a pallanuoto a livello agonistico nazionale per dieci anni",
-      "🌏 Sei mesi in giro da solo nel Sud-Est Asiatico"
+      "Potremmo parlare di quella volta in cui ho convinto Fred Again a suonare sul mio rooftop a Napoli — ci trovate su YouTube, con oltre 3 milioni di visualizzazioni.",
+      "Oppure possiamo parlare di sport! Ho giocato a pallanuoto a livello agonistico per 10 anni.",
+      "O ancora, di viaggi: i 6 mesi in backpacking zaino in spalla attraverso il Sud-est asiatico sono stati probabilmente il periodo più bello della mia vita."
     ]
   },
 
