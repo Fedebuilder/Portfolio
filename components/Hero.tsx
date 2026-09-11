@@ -39,6 +39,19 @@ export default function Hero() {
           }}>
             {t('hero.subtitle')}
           </p>
+          <a
+            href="https://wa.me/393343613449"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '8px',
+              background: colors.navy, color: '#fff', fontSize: '14px', fontWeight: 700,
+              padding: '13px 26px', borderRadius: '100px', textDecoration: 'none',
+              marginBottom: '28px',
+            }}
+          >
+            {t('hero.cta_primary')} →
+          </a>
           <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginBottom: '28px' }}>
             {['Next.js', 'React', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS'].map(tag => (
               <span key={tag} style={{

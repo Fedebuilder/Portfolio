@@ -4,7 +4,7 @@ import SectionHeader from './ui/SectionHeader';
 import Card from './ui/Card';
 import { colors, fonts } from '@/lib/theme';
 
-const icons = ['🔍', '🗺️', '🏷️', '📡'];
+const icons = ['🔍', '🗺️', '🏷️'];
 
 export default function Addons() {
   const { t } = useTranslation('common');
@@ -19,7 +19,7 @@ export default function Addons() {
           {t('addons.subtitle')}
         </p>
 
-        <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+        <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px' }}>
           {items.map((a, i) => (
             <div
               key={i}

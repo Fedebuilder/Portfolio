@@ -8,14 +8,14 @@
 
   "hero": {
     "tag": "Sviluppo Web · Visibilità AI",
-    "title_1": "Cosa trova un tuo cliente",
-    "title_2": "quando ti cerca",
+    "title_1": "Cosa trova un cliente",
+    "title_2": "su di te",
     "title_3": "su ChatGPT?",
     "subtitle": "Costruisco il sito — o sistemo quello che hai già — e lavoro sulla tua visibilità AI, così la risposta sei tu, con le informazioni giuste. Pagamento unico, nessun canone mensile.",
     "logos_caption": "Pensato per essere trovato su",
-    "cta_primary": "Guarda i progetti",
+    "cta_primary": "Prima chiamata gratis — scrivimi",
     "cta_secondary": "Contattami",
-    "photo_caption": "I developer possono sembrare inavvicinabili. Anche io, se non fosse per i cani randagi che accarezzo."
+    "photo_caption": "Non sono un venditore spietato. Ovvio — un cucciolo mi ferma a metà frase."
   },
 
   "shift": {
@@ -105,8 +105,7 @@
     "items": [
       { "title": "Audit di visibilità AI", "desc": "Controllo cosa risponde oggi l'AI su di te e da dove nascono esattamente i problemi." },
       { "title": "Setup entità locale", "desc": "Google Business Profile e directory allineate a un'unica identità coerente e corretta." },
-      { "title": "Dati strutturati", "desc": "Markup che dice esplicitamente a motori di ricerca e AI chi sei, cosa tratti e dove ricevi." },
-      { "title": "Monitoraggio continuo", "desc": "Ricontrollo periodico di come l'AI ti descrive, con correzioni quando qualcosa si disallinea." }
+      { "title": "Dati strutturati", "desc": "Markup che dice esplicitamente a motori di ricerca e AI chi sei, cosa tratti e dove ricevi." }
     ]
   },
 
@@ -127,7 +126,7 @@
       },
       {
         "q": "Ci sono costi ricorrenti?",
-        "a": "No. Paghi una volta per il sito. L'unica spesa fissa è il dominio (circa 15-20€ l'anno, probabilmente ce l'hai già). Il monitoraggio della visibilità AI è l'unico servizio ricorrente opzionale, e resta sempre una tua scelta."
+        "a": "No. Paghi una volta per il sito. L'unica spesa fissa è il dominio (circa 15-20€ l'anno, probabilmente ce l'hai già)."
       },
       {
         "q": "E se non ho foto o testi?",

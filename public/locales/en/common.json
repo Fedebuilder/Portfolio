@@ -8,14 +8,14 @@
 
   "hero": {
     "tag": "Web Developer · AI Search Visibility",
-    "title_1": "What does your client find",
-    "title_2": "when they search you",
+    "title_1": "What does a client find",
+    "title_2": "about you",
     "title_3": "on ChatGPT?",
     "subtitle": "I build the site — or fix the one you already have — and shape your AI visibility, so the answer is you, with the right information. One-off payment, no monthly fees.",
     "logos_caption": "Built to be found on",
-    "cta_primary": "See my work",
+    "cta_primary": "First call's free — text me",
     "cta_secondary": "Get in touch",
-    "photo_caption": "Developers can seem hard to approach. Also, I stop for stray dogs."
+    "photo_caption": "Not exactly a ruthless salesman. Clearly — a puppy can stop me mid-pitch."
   },
 
   "shift": {
@@ -105,8 +105,7 @@
     "items": [
       { "title": "AI visibility audit", "desc": "I check what AI currently says about you, and trace exactly where the gaps come from." },
       { "title": "Local entity setup", "desc": "Google Business Profile and directory listings aligned to one consistent, correct identity." },
-      { "title": "Structured data", "desc": "Schema markup that tells search and AI engines exactly who you are, what you treat, and where." },
-      { "title": "Ongoing monitoring", "desc": "Periodic re-check of how AI describes you, with fixes applied when something drifts." }
+      { "title": "Structured data", "desc": "Schema markup that tells search and AI engines exactly who you are, what you treat, and where." }
     ]
   },
 
@@ -127,7 +126,7 @@
       },
       {
         "q": "Are there monthly fees?",
-        "a": "No. You pay once and that's it. The only ongoing cost is your domain (~$20/year). Hosting on Vercel is free for sites like yours. AI visibility monitoring is the one optional recurring service, and it's entirely your call."
+        "a": "No. You pay once and that's it. The only ongoing cost is your domain (~$20/year). Hosting on Vercel is free for sites like yours."
       },
       {
         "q": "Do you provide photos or copy?",
