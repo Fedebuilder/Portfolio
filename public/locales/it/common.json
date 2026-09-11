@@ -42,15 +42,15 @@
   },
 
   "projects": {
-    "title": "Alcuni dei progetti su cui ho lavorato",
+    "title": "Alcune delle cose su cui ho lavorato",
     "subtitle": "Non mockup. Siti live, clienti veri.",
-    "camilla_title": "Camilla Galli — Osteopata",
-    "camilla_desc": "Sito vetrina per un'osteopata a Milano, costruito per la ricerca fin dal primo giorno. Case study in corso per il lavoro di visibilità AI descritto sopra.",
+    "camilla_title": "Camilla Galli Osteopata — Sito Web",
+    "camilla_desc": "Sito vetrina per un'osteopata a Milano, costruito per la ricerca fin dal primo giorno. Un sito web focalizzato sulla conversione con prenotazione diretta su WhatsApp.",
     "camilla_tag": "Sito vetrina",
-    "betterpdp_title": "BetterPDP — SaaS B2B",
-    "betterpdp_desc": "Lo strumento dietro questo intero approccio: misura quanto una pagina web viene trovata e interpretata correttamente dai motori AI (ChatGPT, Perplexity, Claude). Costruito da solo, ora applicato ai singoli professionisti.",
+    "betterpdp_title": "BetterPDP — Software B2B",
+    "betterpdp_desc": "Lo strumento dietro questo intero approccio: misura quanto una pagina web viene trovata e interpretata correttamente dai motori AI (ChatGPT, Perplexity, Claude). Software sviluppato da solo, ora faccio consulenza per professionisti.",
     "betterpdp_tag": "Il motore",
-    "mountainhorses_title": "Mountain Horses Outfitters — Nuova Zelanda",
+    "mountainhorses_title": "Mountain Horses Outfitters — Maneggio in Nuova Zelanda",
     "mountainhorses_desc": "Consulenza di marketing digitale e visibilità AI per un outfitter di trekking a cavallo nell'alta montagna della Nuova Zelanda — gli stessi principi di findability del lavoro AEO qui sopra, applicati al turismo d'avventura.",
     "mountainhorses_tag": "Consulenza marketing & AI",
     "visit": "Apri il sito →"

@@ -42,14 +42,14 @@
   },
 
   "projects": {
-    "title": "Few of the projects I've worked on",
-    "camilla_title": "Camilla Galli — Osteopath",
-    "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. Current case study for the AI-visibility work above.",
+    "title": "Few of the stuff I've worked on",
+    "camilla_title": "Camilla Galli Osteopath - Website",
+    "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. A conversion-focused website with direct WhatsApp booking.",
     "camilla_tag": "Showcase site",
-    "betterpdp_title": "BetterPDP — B2B SaaS",
-    "betterpdp_desc": "The tool behind this whole approach: it scores web pages for how well AI search engines (ChatGPT, Perplexity, Claude) find and interpret them. Built solo, now applied to individual professionals.",
+    "betterpdp_title": "BetterPDP — Software B2B",
+    "betterpdp_desc": "The tool behind this whole approach: it scores web pages for how well AI search engines (ChatGPT, Perplexity, Claude) find and interpret them. Built the software in solo, now consulting to professionals.",
     "betterpdp_tag": "The engine",
-    "mountainhorses_title": "Mountain Horses Outfitters — NZ",
+    "mountainhorses_title": "Mountain Horses Outfitters — Horse Riding Company in NZ",
     "mountainhorses_desc": "Digital marketing and AI-visibility consulting for a horse trekking outfitter in New Zealand's high country — the same findability principles as the health-AEO work above, applied to adventure tourism.",
     "mountainhorses_tag": "Marketing & AI consulting",
     "visit": "Visit site →"
