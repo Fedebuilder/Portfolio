@@ -42,7 +42,7 @@
   },
 
   "projects": {
-    "title": "Few of the stuff I've worked on",
+    "title": "A few things I've worked on",
     "camilla_title": "Camilla Galli Osteopath - Website",
     "camilla_desc": "Showcase site for an osteopath in Milan, built for search from day one. A conversion-focused website with direct WhatsApp booking.",
     "camilla_tag": "Showcase site",
@@ -59,6 +59,12 @@
     "title": "See where you actually stand.",
     "subtitle": "15-minute call. No pitch, no obligation — just a look at what AI currently says about you.",
     "cta": "Convinced you to text me?"
+  },
+
+  "midcta2": {
+    "title": "That's everything. Your move.",
+    "subtitle": "No more reading needed — 15 minutes on a call tells you more than the rest of this page.",
+    "cta": "Text me"
   },
 
   "process": {

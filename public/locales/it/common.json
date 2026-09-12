@@ -62,6 +62,12 @@
     "cta": "Ti ho convinto a scrivermi?"
   },
 
+  "midcta2": {
+    "title": "Tutto qui. Tocca a te.",
+    "subtitle": "Niente altro da leggere — 15 minuti al telefono dicono di più del resto di questa pagina.",
+    "cta": "Scrivimi"
+  },
+
   "process": {
     "title": "Come lavoro",
     "subtitle": "Semplice e senza sorprese.",

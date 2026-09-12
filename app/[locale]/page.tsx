@@ -21,6 +21,7 @@ export default function Home() {
         <MidCTA />
         <Addons />
         <FAQ />
+        <MidCTA ns="midcta2" />
         <About />
         <Contact />
       </div>

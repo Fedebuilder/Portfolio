@@ -2,7 +2,11 @@
 import { useTranslation } from 'react-i18next';
 import { colors, fonts } from '@/lib/theme';
 
-export default function MidCTA() {
+interface MidCTAProps {
+  ns?: 'midcta' | 'midcta2';
+}
+
+export default function MidCTA({ ns = 'midcta' }: MidCTAProps) {
   const { t } = useTranslation('common');
 
   return (
@@ -26,9 +30,9 @@ export default function MidCTA() {
             marginBottom: '8px',
           }}
         >
-          {t('midcta.title')}
+          {t(`${ns}.title`)}
         </h2>
-        <p style={{ fontSize: '14px', color: colors.inkMuted, marginBottom: '22px' }}>{t('midcta.subtitle')}</p>
+        <p style={{ fontSize: '14px', color: colors.inkMuted, marginBottom: '22px' }}>{t(`${ns}.subtitle`)}</p>
         <a
           href="https://wa.me/393343613449"
           target="_blank"
@@ -46,7 +50,7 @@ export default function MidCTA() {
             textDecoration: 'none',
           }}
         >
-          {t('midcta.cta')} →
+          {t(`${ns}.cta`)} →
         </a>
       </div>
     </section>
