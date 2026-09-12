@@ -77,7 +77,7 @@ export default function Hero() {
             </a>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: '8px', marginBottom: '28px' }}>
-            {['Next.js', 'React', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS'].map(tag => (
+            {['AI Visibility Audits', 'Marketing Consulting', 'Websites, Built or Fixed', 'Structured Data Setup', 'Catchy Designs'].map(tag => (
               <span key={tag} style={{
                 background: colors.surface, border: `1px solid ${colors.border}`,
                 color: colors.inkSoft, fontSize: '12px', fontWeight: 600,
