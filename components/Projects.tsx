@@ -46,14 +46,32 @@ export default function Projects() {
     <section id="projects" style={{ paddingBottom: '48px', scrollMarginTop: '32px' }}>
       <SectionHeader label={t('projects.title')} />
 
-      {/* auto-fit instead of a fixed 2-col grid: handles 2 or 3 cards cleanly
-          without an orphaned card on its own row, and still collapses to 1
-          column on narrow screens without needing the .grid-2 media query. */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px' }}>
+      {/* Horizontal scroll instead of a wrapping grid: cards keep a fixed
+          width and the row scrolls, so it works as a swipeable carousel on
+          mobile and a scrollable strip on desktop, no matter how many
+          projects get added later. scroll-snap makes it settle on a card
+          instead of stopping mid-way. */}
+      <div
+        className="projects-scroll"
+        style={{
+          display: 'flex',
+          gap: '20px',
+          overflowX: 'auto',
+          scrollSnapType: 'x mandatory',
+          paddingBottom: '8px',
+          WebkitOverflowScrolling: 'touch',
+        }}
+      >
         {projects.map((p) => (
-          <a key={p.key} href={p.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none', display: 'block' }}>
+          <a
+            key={p.key}
+            href={p.link}
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: 'none', display: 'block', flex: '0 0 auto', width: 'min(320px, 82vw)', scrollSnapAlign: 'start' }}
+          >
             <div
-              style={{ background: colors.surface, border: `1px solid ${colors.border}`, borderRadius: '20px', overflow: 'hidden', boxShadow: shadows.card, cursor: 'pointer' }}
+              style={{ background: colors.surface, border: `1px solid ${colors.border}`, borderRadius: '20px', overflow: 'hidden', boxShadow: shadows.card, cursor: 'pointer', height: '100%' }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-3px)';
                 (e.currentTarget as HTMLDivElement).style.boxShadow = shadows.cardHover;
