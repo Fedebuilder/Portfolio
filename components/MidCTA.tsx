@@ -13,8 +13,7 @@ export default function MidCTA({ ns = 'midcta' }: MidCTAProps) {
     <section style={{ paddingBottom: '48px' }}>
       <div
         style={{
-          background: colors.surface,
-          border: `1px solid ${colors.border}`,
+          background: colors.navy,
           borderRadius: '20px',
           padding: '32px 36px',
           textAlign: 'center' as const,
@@ -25,14 +24,14 @@ export default function MidCTA({ ns = 'midcta' }: MidCTAProps) {
             fontFamily: fonts.serif,
             fontSize: '22px',
             fontWeight: 600,
-            color: colors.ink,
+            color: '#fff',
             letterSpacing: '-0.01em',
             marginBottom: '8px',
           }}
         >
           {t(`${ns}.title`)}
         </h2>
-        <p style={{ fontSize: '14px', color: colors.inkMuted, marginBottom: '22px' }}>{t(`${ns}.subtitle`)}</p>
+        <p style={{ fontSize: '14px', color: colors.navyMuted, marginBottom: '22px' }}>{t(`${ns}.subtitle`)}</p>
         <a
           href="https://wa.me/393343613449"
           target="_blank"
@@ -41,8 +40,8 @@ export default function MidCTA({ ns = 'midcta' }: MidCTAProps) {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '8px',
-            background: colors.navy,
-            color: '#fff',
+            background: '#fff',
+            color: colors.navy,
             fontSize: '14px',
             fontWeight: 700,
             padding: '13px 26px',
